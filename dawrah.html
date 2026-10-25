@@ -1218,6 +1218,685 @@ body.urdu-mode .faq-trigger { text-align: right; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in-section.visible { opacity: 1; transform: translateY(0); }
+
+/* ── COMPREHENSIVE MOBILE RESPONSIVE SYSTEM (TABLETS & PHONES) ── */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 58px;
+  }
+
+  body {
+    font-size: 14.5px;
+  }
+
+  body.urdu-mode {
+    line-height: 1.85;
+  }
+  body.urdu-mode .day-header-card {
+    border-left: none;
+    border-right: 3px solid var(--gold);
+  }
+  body.urdu-mode .session-card::before {
+    left: auto;
+    right: 0;
+  }
+  body.urdu-mode .session-card {
+    border-left: 1px solid var(--card-border);
+  }
+
+  .section-padding {
+    padding: 2.8rem 1rem;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.35rem;
+  }
+
+  .section-heading {
+    font-size: 1.45rem;
+    line-height: 1.28;
+    margin-bottom: 0.4rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin: 0 auto 1.6rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .nav-brand-wrap {
+    gap: 0.55rem;
+  }
+
+  .nav-brand-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .nav-brand {
+    font-size: 0.92rem;
+    letter-spacing: 0.8px;
+  }
+
+  .nav-brand span {
+    font-size: 0.74rem;
+  }
+
+  .mobile-drawer {
+    width: 82%;
+    max-width: 290px;
+    padding: 4.8rem 1.4rem 2rem;
+    gap: 1.1rem;
+  }
+
+  .mobile-drawer a {
+    font-size: 0.84rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: auto;
+    padding: calc(var(--nav-height) + 1.2rem) 1rem 2.2rem;
+  }
+
+  .bismillah-calligraphy {
+    font-size: 1.25rem;
+    margin-bottom: 0.45rem;
+    line-height: 1.35;
+  }
+
+  .hero-arabic-title {
+    font-size: 1.55rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+  }
+
+  .hero-en-title {
+    font-size: 1.45rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 0.35rem;
+  }
+
+  .dawrah-tagline {
+    font-size: 0.78rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-dates-pill {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    gap: 0.45rem;
+  }
+
+  .hero-desc {
+    font-size: 0.86rem;
+    line-height: 1.6;
+    margin: 0 auto 1.4rem;
+    padding: 0 0.3rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    gap: 0.6rem;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.72rem 1rem;
+    font-size: 0.76rem;
+  }
+
+  .countdown-box {
+    padding: 0.75rem 0.9rem;
+    max-width: 320px;
+    width: 100%;
+  }
+
+  .countdown-title {
+    font-size: 0.65rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .countdown-grid {
+    gap: 0.55rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .countdown-item {
+    min-width: 40px;
+  }
+
+  .countdown-num {
+    font-size: 1.22rem;
+  }
+
+  .countdown-label {
+    font-size: 0.58rem;
+  }
+
+  /* Stats Strip */
+  .stats-strip {
+    padding: 1.2rem 0.85rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .stat-item {
+    padding: 0.55rem 0.35rem;
+    background: var(--card-surface);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm);
+  }
+
+  .stat-icon {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-number {
+    font-size: 1.2rem;
+  }
+
+  .stat-title {
+    font-size: 0.68rem;
+    margin-top: 0.15rem;
+  }
+
+  /* Timetable & Timezones */
+  .timezone-controller {
+    padding: 0.75rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.55rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .timezone-label {
+    font-size: 0.74rem;
+    justify-content: center;
+  }
+
+  .tz-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .tz-btn {
+    padding: 0.45rem 0.4rem;
+    font-size: 0.68rem;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  /* Day Tabs */
+  .day-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    width: 100%;
+  }
+
+  .day-tab-btn {
+    min-width: 0;
+    width: 100%;
+    padding: 0.55rem 0.4rem;
+    text-align: center;
+  }
+
+  .day-tab-btn span.day-title {
+    font-size: 0.84rem;
+  }
+
+  .day-tab-btn span.day-sub {
+    font-size: 0.65rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .day-header-card {
+    padding: 0.65rem 0.85rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .day-header-title {
+    font-size: 0.95rem;
+  }
+
+  /* Session Cards */
+  .session-card {
+    padding: 0.95rem 0.85rem;
+    margin-bottom: 0.85rem;
+    border-radius: 10px;
+  }
+
+  .session-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .session-tag-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .session-badge {
+    font-size: 0.64rem;
+    padding: 0.18rem 0.55rem;
+  }
+
+  .session-times-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+    width: 100%;
+    padding: 0.35rem 0.35rem;
+    border-radius: 10px;
+    background: rgba(8, 18, 12, 0.85);
+  }
+
+  .time-pill {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.68rem;
+    padding: 0.18rem 0.15rem;
+    text-align: center;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+
+  .time-pill strong {
+    font-size: 0.72rem;
+  }
+
+  .session-subject {
+    font-size: 1.02rem;
+    line-height: 1.35;
+    margin-bottom: 0.2rem;
+  }
+
+  .session-subject-arabic {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 0.35rem;
+  }
+
+  .session-teacher-row {
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  .session-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .session-action-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.52rem;
+    font-size: 0.72rem;
+  }
+
+  .footnote-alert {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.78rem;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  /* Subjects Grid */
+  .subjects-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .subject-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+
+  .subject-card-number {
+    font-size: 1.15rem;
+    top: 0.75rem;
+    right: 0.85rem;
+  }
+
+  .subject-discipline {
+    font-size: 0.65rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .subject-title {
+    font-size: 0.96rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .subject-arabic {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .subject-teacher-badge {
+    font-size: 0.76rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  /* Faculty 2-Column Grid on Mobile */
+  .faculty-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .faculty-card-body {
+    padding: 0.85rem 0.4rem;
+  }
+
+  .faculty-avatar {
+    width: 52px;
+    height: 52px;
+    font-size: 0.9rem;
+    margin: 0 auto 0.5rem;
+    border-width: 1.5px;
+  }
+
+  .faculty-name {
+    font-size: 0.8rem;
+    line-height: 1.25;
+    margin-bottom: 0.15rem;
+  }
+
+  .faculty-name-arabic {
+    font-size: 0.86rem;
+    line-height: 1.3;
+    margin-bottom: 0.35rem;
+  }
+
+  .faculty-subject-tag {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+    line-height: 1.2;
+    border-radius: 12px;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Student Study Material */
+  .material-hero-card {
+    padding: 1.2rem 0.95rem;
+    margin-bottom: 1.4rem;
+    border-radius: 10px;
+  }
+
+  .material-flex-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .material-visual-box {
+    padding: 1.1rem 0.75rem;
+    border-radius: 8px;
+  }
+
+  .material-book-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .material-visual-title {
+    font-size: 0.88rem;
+  }
+
+  .material-visual-sub {
+    font-size: 0.7rem;
+  }
+
+  .material-main-heading {
+    font-size: 1.18rem;
+  }
+
+  .material-arabic-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .material-description {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+
+  .material-buttons-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .material-buttons-row .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.76rem;
+  }
+
+  .material-mutun-title {
+    font-size: 0.92rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .material-mutun-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .mutun-item {
+    padding: 0.6rem 0.75rem;
+    gap: 0.6rem;
+    border-radius: 8px;
+  }
+
+  .mutun-num {
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+  }
+
+  .mutun-info h4 {
+    font-size: 0.8rem;
+  }
+
+  .embed-iframe {
+    height: 380px;
+  }
+
+  /* Registration & FAQs */
+  .reg-card-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .reg-card {
+    padding: 1.3rem 1rem;
+    border-radius: 10px;
+  }
+
+  .reg-card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .reg-card-title {
+    font-size: 1rem;
+  }
+
+  .reg-card-fee {
+    font-size: 1.4rem;
+    margin: 0.25rem 0;
+  }
+
+  .reg-card-desc {
+    font-size: 0.78rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .faq-trigger {
+    padding: 0.85rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  .faq-content {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+
+  .footer-hadith {
+    padding: 1rem 0.85rem;
+    margin-bottom: 1.4rem;
+    border-radius: 10px;
+  }
+
+  .footer-hadith .arabic {
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+
+  .footer-hadith .en {
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+  .footer-hadith .source {
+    font-size: 0.7rem;
+  }
+
+  .footer-nav {
+    gap: 0.8rem 1.1rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .footer-link {
+    font-size: 0.78rem;
+  }
+
+  .footer-copy {
+    font-size: 0.7rem;
+    padding-top: 1rem;
+  }
+}
+
+/* ── EXTRA SMALL MOBILE SCREENS (<= 400px) ── */
+@media (max-width: 400px) {
+  .section-padding {
+    padding: 2.3rem 0.75rem;
+  }
+
+  .navbar {
+    padding: 0 0.75rem;
+  }
+
+  .nav-brand {
+    font-size: 0.82rem;
+    letter-spacing: 0.4px;
+  }
+
+  .nav-brand span {
+    display: none;
+  }
+
+  .hero-arabic-title {
+    font-size: 1.35rem;
+  }
+
+  .hero-en-title {
+    font-size: 1.25rem;
+  }
+
+  .countdown-item {
+    min-width: 36px;
+  }
+
+  .countdown-num {
+    font-size: 1.15rem;
+  }
+
+  .faculty-avatar {
+    width: 46px;
+    height: 46px;
+    font-size: 0.82rem;
+  }
+
+  .faculty-name {
+    font-size: 0.75rem;
+  }
+
+  .faculty-name-arabic {
+    font-size: 0.82rem;
+  }
+
+  .faculty-subject-tag {
+    font-size: 0.62rem;
+    padding: 0.15rem 0.35rem;
+  }
+
+  .session-card {
+    padding: 0.85rem 0.7rem;
+  }
+
+  .time-pill {
+    font-size: 0.64rem;
+    padding: 0.1rem 0.15rem;
+  }
+}
+
 </style>
 </head>
 <body>
