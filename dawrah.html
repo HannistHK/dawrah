@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The First Dawrah ‘Ilmiyyah by Ṭālib al-‘Ilm Project · Madrassa Al-Athariyyah. Online intensive Islamic seminar week on 7–9 November 2026 featuring renowned scholars of the Sunnah.">
-<meta name="keywords" content="Dawrah Ilmiyyah, Talib al-Ilm, Islamic Course, Madrassa Al-Athariyyah, Hadith, Aqeedah, Fiqh, Tafsir, Salafi, Islamic Conference">
+<meta name="description" content="The First Dawrah ‘Ilmiyyah by Ṭālib al-‘Ilm Project · Madrassa Al-Athariyyah · 7–9 November 2026 featuring renowned scholars of the Sunnah with official Student Study Material.">
+<meta name="keywords" content="Dawrah Ilmiyyah, Talib al-Ilm, Islamic Course, Madrassa Al-Athariyyah, Hadith, Aqeedah, Fiqh, Tafsir, Salafi, Mutun, Study Material">
 <meta property="og:title" content="The First Dawrah ‘Ilmiyyah — Ṭālib al-‘Ilm Project · 7–9 Nov 2026">
-<meta property="og:description" content="An intensive online Dawrah with scholars of the Sunnah covering Hadith, Aqeedah, Fiqh, Tafsir, and classical Mutun with official Certificate of Attendance.">
+<meta property="og:description" content="Three days of classical Islamic studies with scholars of the Sunnah covering Hadith, Aqeedah, Fiqh, Tafsir, and Mutun. Download official Student Study Material.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#08120c">
 <title>The First Dawrah ‘Ilmiyyah · Ṭālib al-‘Ilm Project</title>
@@ -14,10 +14,26 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
 
 <style>
+/* ── LOCAL 29LT ADIR FONT ── */
+@font-face {
+  font-family: '29LT Adir';
+  src: url('29lt-adir-regular/29lt-adir-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: '29LT Adir';
+  src: url('29lt-adir-regular/29lt-adir-regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ── RESET & VARIABLES ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -40,8 +56,8 @@
   --sister-bg: rgba(216, 128, 156, 0.12);
   --font-heading: 'Cinzel', serif;
   --font-body: 'Lora', serif;
-  --font-arabic: 'Amiri', serif;
-  --font-urdu: 'Noto Nastaliq Urdu', serif;
+  --font-arabic: '29LT Adir', 'Amiri', serif;
+  --font-urdu: 'Noto Nastaliq Urdu', '29LT Adir', serif;
   --nav-height: 68px;
   --radius: 12px;
   --radius-sm: 8px;
@@ -60,18 +76,33 @@ body {
   transition: direction 0.3s;
 }
 
+/* ── ARABIC TYPOGRAPHY RULES (29LT ADIR & CLEAN SPACING) ── */
+.bismillah-calligraphy,
+.hero-arabic-title,
+.session-subject-arabic,
+.subject-arabic,
+.faculty-name-arabic,
+.footer-hadith .arabic,
+.material-arabic,
+.arabic-text {
+  font-family: var(--font-arabic) !important;
+  letter-spacing: 0 !important;
+  word-spacing: 0.08em;
+  line-height: 1.6;
+}
+
 /* Urdu Mode Styles */
 body.urdu-mode {
   font-family: var(--font-urdu);
   direction: rtl;
-  line-height: 2.2;
+  line-height: 2.1;
 }
 body.urdu-mode .nav-links { flex-direction: row-reverse; }
 body.urdu-mode .feature-badges { flex-direction: row-reverse; }
 body.urdu-mode .timeline-slot { border-left: none; border-right: 3px solid var(--gold); padding-left: 0; padding-right: 1.5rem; }
 body.urdu-mode .subject-card { text-align: right; }
 body.urdu-mode .bio-list { text-align: right; padding-left: 0; padding-right: 1.2rem; }
-body.urdu-mode .cert-table th:first-child, body.urdu-mode .cert-table td:first-child { text-align: right; }
+body.urdu-mode * { letter-spacing: 0 !important; }
 
 a { color: var(--gold); text-decoration: none; transition: color 0.3s ease; }
 a:hover { color: var(--gold-lt); }
@@ -281,19 +312,16 @@ a:hover { color: var(--gold-lt); }
 .hero-content { position: relative; z-index: 3; max-width: 860px; }
 
 .bismillah-calligraphy {
-  font-family: var(--font-arabic);
-  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-size: clamp(1.4rem, 3.2vw, 2.1rem);
   color: var(--gold);
-  line-height: 1.4;
-  margin-bottom: 0.8rem;
-  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 0.9rem;
 }
 .hero-arabic-title {
-  font-family: var(--font-arabic);
-  font-size: clamp(1.9rem, 5.5vw, 3.2rem);
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   line-height: 1.4;
 }
 .hero-en-title {
@@ -717,11 +745,9 @@ a:hover { color: var(--gold-lt); }
   line-height: 1.35;
 }
 .session-subject-arabic {
-  font-family: var(--font-arabic);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--gold);
   margin-bottom: 0.5rem;
-  line-height: 1.4;
   direction: rtl;
 }
 .session-teacher-row {
@@ -844,8 +870,7 @@ a:hover { color: var(--gold-lt); }
   margin-bottom: 0.3rem;
 }
 .subject-arabic {
-  font-family: var(--font-arabic);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--gold-lt);
   margin-bottom: 0.8rem;
   direction: rtl;
@@ -922,8 +947,7 @@ a:hover { color: var(--gold-lt); }
   margin-bottom: 0.2rem;
 }
 .faculty-name-arabic {
-  font-family: var(--font-arabic);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--gold);
   margin-bottom: 0.6rem;
   direction: rtl;
@@ -956,257 +980,197 @@ a:hover { color: var(--gold-lt); }
 }
 .bio-list li { margin-bottom: 0.4rem; }
 
-/* ── CERTIFICATE SECTION & GENERATOR ── */
-.certificate-section {
+/* ── STUDENT STUDY MATERIAL SECTION ── */
+.material-section {
   background: var(--bg-secondary);
   position: relative;
 }
-.cert-generator-wrapper {
+.material-hero-card {
   background: var(--card-surface);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
-  padding: 2.2rem;
-  margin-bottom: 3rem;
-}
-.cert-controls-form {
-  display: grid;
-  grid-template-columns: 140px 1fr auto;
-  gap: 1rem;
-  align-items: center;
-  max-width: 820px;
-  margin: 0 auto 2rem;
-}
-@media(max-width: 700px){
-  .cert-controls-form { grid-template-columns: 1fr; }
-}
-.cert-input-group label {
-  display: block;
-  font-size: 0.75rem;
-  font-family: var(--font-heading);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.35rem;
-}
-.cert-select, .cert-input {
-  width: 100%;
-  background: var(--bg-main);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-sm);
-  padding: 0.75rem 1rem;
-  color: var(--text);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  outline: none;
-  transition: border-color 0.3s;
-}
-.cert-select:focus, .cert-input:focus { border-color: var(--gold); }
-
-/* CERTIFICATE CANVAS PREVIEW (SCREEN & PRINT) */
-.cert-frame-outer {
-  max-width: 950px;
-  margin: 0 auto;
-  background: #060e0a;
-  border-radius: 12px;
-  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6);
-  padding: 1.2rem;
-  border: 1px solid rgba(201, 168, 76, 0.3);
-}
-.cert-sheet {
-  background: #fdfbf7;
-  color: #1a221d;
-  padding: 2.8rem 2.5rem;
-  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 0 40px rgba(201, 168, 76, 0.08);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
 }
-/* Classic Islamic Double Gold Border */
-.cert-border-outer {
-  border: 3px double #c9a84c;
-  padding: 8px;
-  position: relative;
-}
-.cert-border-inner {
-  border: 1px solid #c9a84c;
-  padding: 2rem 2.2rem;
-  position: relative;
-  background: #fffefb;
-}
-/* Corner Ornaments */
-.cert-corner {
+.material-hero-card::before {
+  content: '';
   position: absolute;
-  width: 24px; height: 24px;
-  border-color: #c9a84c;
-  pointer-events: none;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--gold-gradient);
 }
-.cert-corner.top-left { top: 4px; left: 4px; border-top: 3px solid #c9a84c; border-left: 3px solid #c9a84c; }
-.cert-corner.top-right { top: 4px; right: 4px; border-top: 3px solid #c9a84c; border-right: 3px solid #c9a84c; }
-.cert-corner.bottom-left { bottom: 4px; left: 4px; border-bottom: 3px solid #c9a84c; border-left: 3px solid #c9a84c; }
-.cert-corner.bottom-right { bottom: 4px; right: 4px; border-bottom: 3px solid #c9a84c; border-right: 3px solid #c9a84c; }
-
-/* Watermark Seal */
-.cert-watermark {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 260px; height: 260px;
-  opacity: 0.045;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='50,0 63,37 100,50 63,63 50,100 37,63 0,50 37,37' fill='%23c9a84c'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.material-flex-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.2rem;
+  align-items: center;
+}
+@media(max-width: 850px){
+  .material-flex-layout { grid-template-columns: 1fr; text-align: center; }
 }
 
-.cert-header { text-align: center; margin-bottom: 1.5rem; }
-.cert-bismillah {
-  font-family: var(--font-arabic);
-  font-size: 1.8rem;
-  color: #8b6b1b;
+/* 3D Book / Folder Visual */
+.material-visual-box {
+  background: linear-gradient(145deg, #182c20 0%, #0d1a13 100%);
+  border: 2px solid rgba(201,168,76,0.3);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.5);
+  position: relative;
+}
+.material-pdf-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: #c93b3b;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+.material-book-icon {
+  font-size: 3.5rem;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  text-shadow: 0 4px 15px rgba(201,168,76,0.3);
+}
+.material-visual-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
   margin-bottom: 0.3rem;
   letter-spacing: 1px;
 }
-.cert-main-title {
-  font-family: var(--font-heading);
-  font-size: 1.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: #1a2c1f;
-  text-transform: uppercase;
-  margin-bottom: 0.2rem;
-}
-.cert-sub-title {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  color: #98782a;
-  letter-spacing: 2px;
-  font-weight: 600;
+.material-visual-sub {
+  font-size: 0.75rem;
+  color: var(--gold-lt);
 }
 
-.cert-body-text {
-  text-align: center;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  color: #334037;
-  line-height: 1.8;
+.material-details-box { display: flex; flex-direction: column; }
+.material-main-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+.material-arabic-title {
+  font-size: 1.35rem;
+  color: var(--gold);
   margin-bottom: 1rem;
-}
-.cert-name-highlight {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #12301c;
-  display: inline-block;
-  padding: 0.2rem 1.8rem;
-  margin: 0.3rem 0;
-  border-bottom: 2px solid #c9a84c;
-  letter-spacing: 1px;
-}
-
-/* Certificate Subjects Table */
-.cert-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.2rem 0;
-  font-size: 0.84rem;
-}
-.cert-table th {
-  background: #f4efe4;
-  color: #273b2c;
-  font-family: var(--font-heading);
-  font-size: 0.74rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 0.55rem 0.8rem;
-  border-top: 1px solid #d4c49d;
-  border-bottom: 1px solid #d4c49d;
-  text-align: left;
-}
-.cert-table td {
-  padding: 0.5rem 0.8rem;
-  border-bottom: 1px solid #eee8d8;
-  color: #2b382f;
-  line-height: 1.45;
-}
-.cert-table tr:hover td { background: #faf7ef; }
-.cert-table td.subject-col strong { color: #162a1b; }
-.cert-table td.teacher-col { color: #80621a; font-weight: 500; }
-
-.cert-dua {
-  text-align: center;
-  margin: 1.4rem auto 1.5rem;
-  padding: 0.8rem 1.2rem;
-  border-top: 1px dashed #d9cb9e;
-  border-bottom: 1px dashed #d9cb9e;
-  max-width: 780px;
-}
-.cert-dua-ar {
-  font-family: var(--font-arabic);
-  font-size: 1.15rem;
-  color: #7d5e18;
   direction: rtl;
-  margin-bottom: 0.2rem;
 }
-.cert-dua-en {
-  font-style: italic;
-  font-size: 0.82rem;
-  color: #4b5a50;
+.material-description {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.8;
+  margin-bottom: 1.8rem;
+}
+.material-buttons-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media(max-width: 850px){
+  .material-buttons-row { justify-content: center; }
 }
 
-.cert-footer-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 1.8rem;
-  padding: 0 1rem;
-}
-.cert-sig-box {
-  text-align: center;
-  min-width: 180px;
-}
-.cert-sig-line {
-  width: 160px;
-  height: 1px;
-  background: #a18e5b;
-  margin: 0 auto 0.4rem;
-}
-.cert-sig-title {
+/* Material Mutun Index Grid */
+.material-mutun-title {
   font-family: var(--font-heading);
-  font-size: 0.72rem;
+  font-size: 1.15rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #6d5b2c;
-  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  text-align: center;
 }
-.cert-sig-dept {
-  font-size: 0.68rem;
-  color: #7b887f;
+.material-mutun-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
-.cert-seal-badge {
-  width: 76px; height: 76px;
-  border-radius: 50%;
-  border: 2px dashed #c9a84c;
+.mutun-item {
+  background: var(--card-surface);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 1.1rem;
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  transition: transform 0.25s, border-color 0.25s;
+}
+.mutun-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201,168,76,0.4);
+}
+.mutun-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.12);
+  color: var(--gold);
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: #8b6b1b;
   font-family: var(--font-heading);
-  font-size: 0.58rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 4px;
-  background: #faf6ea;
-  box-shadow: 0 2px 8px rgba(201,168,76,0.15);
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.mutun-info h4 {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+.mutun-info p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
 
-.cert-action-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+/* Interactive Drive Embed Preview Frame */
+.embed-preview-wrapper {
+  background: var(--card-surface);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
   margin-top: 2rem;
+  display: none;
+}
+.embed-preview-wrapper.open { display: block; animation: fadeIn 0.4s ease; }
+.embed-preview-header {
+  background: rgba(0,0,0,0.3);
+  padding: 0.8rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--card-border);
+}
+.embed-preview-title {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+.embed-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.embed-close-btn:hover { color: var(--gold); }
+.embed-iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
 }
 
 /* ── REGISTRATION & FAQS SECTION ── */
@@ -1321,7 +1285,6 @@ body.urdu-mode .faq-trigger { text-align: right; }
   background: rgba(201, 168, 76, 0.03);
 }
 .footer-hadith .arabic {
-  font-family: var(--font-arabic);
   font-size: 1.35rem;
   color: var(--gold);
   line-height: 1.6;
@@ -1366,45 +1329,6 @@ body.urdu-mode .faq-trigger { text-align: right; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .fade-in-section.visible { opacity: 1; transform: translateY(0); }
-
-/* ── PRINT MEDIA RULES FOR CERTIFICATE ── */
-@media print {
-  body {
-    background: #fff !important;
-    color: #000 !important;
-  }
-  .navbar, .hero, .stats-strip, .timetable-section, .subjects-section,
-  .faculty-section, .reg-section, .footer, .cert-controls-form, .cert-action-buttons,
-  .footnote-alert, .day-tabs, .timezone-controller {
-    display: none !important;
-  }
-  .certificate-section {
-    padding: 0 !important;
-    background: none !important;
-  }
-  .cert-generator-wrapper {
-    border: none !important;
-    padding: 0 !important;
-    background: none !important;
-  }
-  .cert-frame-outer {
-    max-width: 100% !important;
-    padding: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
-    background: none !important;
-  }
-  .cert-sheet {
-    box-shadow: none !important;
-    border: none !important;
-    padding: 10mm !important;
-    width: 100% !important;
-  }
-  @page {
-    size: A4 landscape;
-    margin: 8mm;
-  }
-}
 </style>
 </head>
 <body>
@@ -1420,7 +1344,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
     <li><a href="#timetable" data-en="Timetable" data-ur="اوقات کار">Timetable</a></li>
     <li><a href="#subjects" data-en="Subjects" data-ur="مضامین">Subjects</a></li>
     <li><a href="#faculty" data-en="Mashayikh" data-ur="مشائخ">Mashayikh</a></li>
-    <li><a href="#certificate" data-en="Certificate" data-ur="سرٹیفکیٹ">Certificate</a></li>
+    <li><a href="#study-material" data-en="Study Material" data-ur="مطالعاتی مواد">Study Material</a></li>
     <li><a href="#registration" data-en="Register" data-ur="اندراج">Register</a></li>
     <li><a href="index.html" class="nav-cta-btn" data-en="Level 2 Course" data-ur="لیول 2 کورس"><i class="fas fa-graduation-cap"></i> Level 2 Course</a></li>
     <li>
@@ -1441,7 +1365,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
   <a href="#timetable" data-en="Timetable" data-ur="اوقات کار">Timetable</a>
   <a href="#subjects" data-en="Subjects" data-ur="مضامین">Subjects</a>
   <a href="#faculty" data-en="Mashayikh" data-ur="مشائخ">Mashayikh</a>
-  <a href="#certificate" data-en="Certificate" data-ur="سرٹیفکیٹ">Certificate</a>
+  <a href="#study-material" data-en="Study Material" data-ur="مطالعاتی مواد">Study Material</a>
   <a href="#registration" data-en="Register" data-ur="اندراج">Register</a>
   <a href="index.html" style="color:var(--gold)" data-en="Go to Level 2 Course" data-ur="لیول 2 کورس پر جائیں"><i class="fas fa-graduation-cap"></i> Level 2 Course</a>
   <button class="lang-toggle" id="langToggleMobile" aria-label="Toggle Urdu/English" style="margin-top:1rem">
@@ -1456,23 +1380,23 @@ body.urdu-mode .faq-trigger { text-align: right; }
   <canvas id="heroCanvas"></canvas>
 
   <div class="hero-content">
-    <div class="bismillah-calligraphy">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-    <div class="hero-arabic-title">الدَّوْرَةُ الْعِلْمِيَّةُ الْأُولَى — مَشْرُوعُ طَالِبِ الْعِلْمِ</div>
+    <div class="bismillah-calligraphy">بسم الله الرحمن الرحيم</div>
+    <div class="hero-arabic-title">الدورة العلمية الأولى</div>
     <h1 class="hero-en-title">THE FIRST DAWRAH ‘ILMIYYAH</h1>
     <div class="dawrah-tagline" data-en="Ṭālib al-‘Ilm Project · Intensive Academic Week" data-ur="مشروع طالب العلم · علمی و تدریسی دورہ">Ṭālib al-‘Ilm Project · Intensive Academic Week</div>
 
     <div class="hero-dates-pill">
       <i class="fas fa-calendar-alt"></i>
-      <span data-en="Online Seminar · 7–9 November 2026" data-ur="آن لائن سیمینار · 7 تا 9 نومبر 2026">Online Seminar · 7–9 November 2026</span>
+      <span data-en="7–9 November 2026" data-ur="7 تا 9 نومبر 2026">7–9 November 2026</span>
     </div>
 
-    <p class="hero-desc" data-en="An intensive three-day scholastic gathering covering essential classical treatises in Fiqh, ‘Aqīdah, Tafsīr, and Ḥadīth — instructed by esteemed scholars of the Sunnah with official Certificate of Attendance." data-ur="تین روزہ علمی دورہ جس میں فقہ، عقیدہ، تفسیر اور حدیث کے بنیادی کلاسیکی متون کا مطالعہ کیا جائے گا — اہل سنت کے معتبر مشائخ کے زیرِ درس، مع باقاعدہ تصدیق شدہ سرٹیفکیٹ۔">
-      An intensive three-day scholastic gathering covering essential classical treatises in Fiqh, ‘Aqīdah, Tafsīr, and Ḥadīth — instructed by esteemed scholars of the Sunnah with official Certificate of Attendance.
+    <p class="hero-desc" data-en="An intensive three-day scholastic gathering covering essential classical treatises in Fiqh, ‘Aqīdah, Tafsīr, and Ḥadīth — instructed by esteemed scholars of the Sunnah with comprehensive student study material." data-ur="تین روزہ علمی دورہ جس میں فقہ، عقیدہ، تفسیر اور حدیث کے بنیادی کلاسیکی متون کا مطالعہ کیا جائے گا — اہل سنت کے معتبر مشائخ کے زیرِ درس، مع جامع مطالعاتی کتابچہ۔">
+      An intensive three-day scholastic gathering covering essential classical treatises in Fiqh, ‘Aqīdah, Tafsīr, and Ḥadīth — instructed by esteemed scholars of the Sunnah with comprehensive student study material.
     </p>
 
     <div class="hero-buttons">
       <a href="#timetable" class="btn btn-primary" data-en="View Timetable" data-ur="اوقات کار دیکھیں"><i class="fas fa-calendar-check"></i> View Timetable</a>
-      <a href="#certificate" class="btn btn-outline" data-en="Certificate Preview" data-ur="سرٹیفکیٹ پیش نظارہ"><i class="fas fa-award"></i> Certificate Preview</a>
+      <a href="https://drive.google.com/file/d/1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline" data-en="Study Material (PDF)" data-ur="مطالعاتی مواد (پی ڈی ایف)"><i class="fas fa-file-pdf"></i> Study Material (PDF)</a>
       <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20would%20like%20to%20register%20for%20the%20First%20Dawrah%20Ilmiyyah%20(7-9%20Nov%202026)" target="_blank" rel="noopener" class="btn btn-green" data-en="Register Free on WhatsApp" data-ur="واٹس ایپ پر مفت رجسٹریشن"><i class="fab fa-whatsapp"></i> Register Free</a>
     </div>
 
@@ -1521,9 +1445,9 @@ body.urdu-mode .faq-trigger { text-align: right; }
       <div class="stat-title" data-en="Mashāyikh &amp; Asātidhah" data-ur="مشائخ و اساتذہ">Mashāyikh &amp; Asātidhah</div>
     </div>
     <div class="stat-item">
-      <div class="stat-icon"><i class="fas fa-certificate"></i></div>
-      <div class="stat-number">Certified</div>
-      <div class="stat-title" data-en="Certificate of Attendance" data-ur="سرٹیفکیٹ برائے شرکت">Certificate of Attendance</div>
+      <div class="stat-icon"><i class="fas fa-file-pdf"></i></div>
+      <div class="stat-number">Coursepack</div>
+      <div class="stat-title" data-en="Study Material PDF" data-ur="مطالعاتی کتابچہ">Study Material PDF</div>
     </div>
   </div>
 </section>
@@ -1599,7 +1523,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="session-body">
           <div>
             <h3 class="session-subject" data-en="The Importance of Ikhlāṣ — Ḥadīth “Innamā al-A‘māl bin-Niyyāt”" data-ur="اخلاص کی اہمیت — حدیث «انما الاعمال بالنیات»">The Importance of Ikhlāṣ — Ḥadīth “Innamā al-A‘māl bin-Niyyāt”</h3>
-            <div class="session-subject-arabic">أَهَمِّيَّةُ الْإِخْلَاصِ — حَدِيثُ «إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ»</div>
+            <div class="session-subject-arabic">أهمية الإخلاص: حديث «إنما الأعمال بالنيات»</div>
             <div class="session-teacher-row">
               <i class="fas fa-user-tie"></i>
               <strong data-en="Shaykh Zafar Alam bin Ziya ur-Rahman al-Athari" data-ur="شیخ ظفر عالم بن ضیاء الرحمن الاثری">Shaykh Zafar Alam bin Ziya ur-Rahman al-Athari</strong>
@@ -1631,7 +1555,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="session-body">
           <div>
             <h3 class="session-subject" data-en="Kashf ash-Shubuhāt (Removing Doubts in Tawheed)" data-ur="کشف الشبہات (توحید کے شبہات کا ازالہ)">Kashf ash-Shubuhāt (Removing Doubts in Tawheed)</h3>
-            <div class="session-subject-arabic">كشف الشبهات — للإمام المجدد محمد بن عبد الوهاب رحمه الله</div>
+            <div class="session-subject-arabic">كشف الشبهات — للإمام محمد بن عبد الوهاب رحمه الله</div>
             <div class="session-teacher-row">
               <i class="fas fa-user-tie"></i>
               <strong data-en="Ustadh Muhammad Abu Bakr bin Yasir al-Lahori" data-ur="استاذ محمد ابو بکر بن یاسر اللاهوری">Ustadh Muhammad Abu Bakr bin Yasir al-Lahori</strong>
@@ -1674,7 +1598,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="session-body">
           <div>
             <h3 class="session-subject" data-en="Shurūṭ aṣ-Ṣalāh wa Arkānuhā wa Wājibātuhā" data-ur="شروط الصلاۃ و ارکانھا و واجباتھا">Shurūṭ aṣ-Ṣalāh wa Arkānuhā wa Wājibātuhā</h3>
-            <div class="session-subject-arabic">شُرُوطُ الصَّلَاةِ وَأَرْكَانُهَا وَوَاجِبَاتُهَا</div>
+            <div class="session-subject-arabic">شروط الصلاة وأركانها وواجباتها</div>
             <div class="session-teacher-row">
               <i class="fas fa-user-tie"></i>
               <strong data-en="Shaykh Muhammad Aakif al-Makki" data-ur="شیخ محمد عاکف المکی">Shaykh Muhammad Aakif al-Makki</strong>
@@ -1706,7 +1630,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="session-body">
           <div>
             <h3 class="session-subject" data-en="Bāb al-Ḥayḍ from ad-Durar al-Bahiyyah (Sisters Only)" data-ur="باب الحیض از الدرر البہیۃ (خصوصی سیشن برائے خواتین)">Bāb al-Ḥayḍ from ad-Durar al-Bahiyyah (Sisters Only)</h3>
-            <div class="session-subject-arabic">بَابُ الْحَيْضِ مِنْ كِتَابِ «الدُّرَرِ الْبَهِيَّةِ» لِلْإِمَامِ الشَّوْكَانِيِّ</div>
+            <div class="session-subject-arabic">باب الحيض من كتاب «الدرر البهية» للإمام الشوكاني</div>
             <div class="session-teacher-row" style="color:var(--sister-pink)">
               <i class="fas fa-user"></i>
               <strong data-en="Ustadhah Bint Raees Ahmad al-Khadeejiyyah al-Athariyyah" data-ur="استاذہ بنت رئیس احمد الخدیجیہ الاثریہ">Ustadhah Bint Raees Ahmad al-Khadeejiyyah al-Athariyyah</strong>
@@ -1738,7 +1662,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="session-body">
           <div>
             <h3 class="session-subject" data-en="Al-Ḥadīth al-Musalsal bil-Awwaliyyah &amp; al-Qaṣīdah al-Waḍḍāḥiyyah" data-ur="الحدیث المسلسل بالاولیہ اور القصیدۃ الوضاحیہ">Al-Ḥadīth al-Musalsal bil-Awwaliyyah &amp; al-Qaṣīdah al-Waḍḍāḥiyyah</h3>
-            <div class="session-subject-arabic">الْحَدِيثُ الْمُسَلْسَلُ بِالْأَوَّلِيَّةِ وَالْقَصِيدَةُ الْوَضَّاحِيَّةُ فِي مَدْحِ أُمِّ الْمُؤْمِنِينَ عَائِشَةَ</div>
+            <div class="session-subject-arabic">الحديث المسلسل بالأولية والقصيدة الوضاحية في مدح أم المؤمنين عائشة</div>
             <div class="session-teacher-row">
               <i class="fas fa-user-tie"></i>
               <strong data-en="Abu Mu‘awiyah Muhammad Qurayshi al-Athari" data-ur="ابو معاویہ محمد قریشی الاثری">Abu Mu‘awiyah Muhammad Qurayshi al-Athari</strong>
@@ -1781,7 +1705,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="session-body">
           <div>
             <h3 class="session-subject" data-en="Tafsīr of Sūrah al-Fātiḥah and Sūrah al-Kahf" data-ur="تفسیر سورۃ الفاتحہ اور سورۃ الکہف">Tafsīr of Sūrah al-Fātiḥah and Sūrah al-Kahf</h3>
-            <div class="session-subject-arabic">تَفْسِيرُ سُورَةِ الْفَاتِحَةِ وَسُورَةِ الْكَهْفِ</div>
+            <div class="session-subject-arabic">تفسير سورة الفاتحة وسورة الكهف</div>
             <div class="session-teacher-row">
               <i class="fas fa-user-tie"></i>
               <strong data-en="Shaykh Hassan Sarim" data-ur="شیخ حسن صارم">Shaykh Hassan Sarim</strong>
@@ -1802,7 +1726,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="session-top">
           <div class="session-tag-group">
             <span class="session-badge closing"><i class="fas fa-flag-checkered"></i> <span data-en="Closing Session (10 Minutes)" data-ur="اختتامی کلمات و نصیحت (10 منٹ)">Closing Session (10 Minutes)</span></span>
-            <span class="session-badge"><i class="fas fa-award"></i> Certificate Guidance &amp; Du‘ā’</span>
+            <span class="session-badge"><i class="fas fa-book-open"></i> Scholastic Advice &amp; Du‘ā’</span>
           </div>
           <div class="session-times-bar">
             <span class="time-pill" data-for="IST">IST: <strong>12:30 am*</strong></span>
@@ -1813,17 +1737,17 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="session-body">
           <div>
             <h3 class="session-subject" data-en="Closing Assembly, Scholastic Advice &amp; Concluding Du‘ā’" data-ur="اختتامی اجلاس، وصایا و ہدایات اور اجتماعی دعا">Closing Assembly, Scholastic Advice &amp; Concluding Du‘ā’</h3>
-            <div class="session-subject-arabic">الْجَلْسَةُ الْخِتَامِيَّةُ وَتَوْجِيهَاتٌ لِطُلَّابِ الْعِلْمِ وَالدُّعَاءُ الْمُبَارَكُ</div>
+            <div class="session-subject-arabic">الجلسة الختامية وتوجيهات لطلاب العلم والدعاء</div>
             <div class="session-teacher-row">
               <i class="fas fa-users"></i>
               <strong data-en="Ṭālib al-‘Ilm Academic Board &amp; Instructors" data-ur="انتظامیہ و مشائخ دورہ علمیہ">Ṭālib al-‘Ilm Academic Board &amp; Instructors</strong>
             </div>
-            <p class="session-desc" data-en="A concise 10-minute closing address with concluding advice for attendees, instructions on continuous talab al-‘ilm, issuance of Certificates of Attendance, and closing du‘ā’." data-ur="دس منٹ کا پرتاثیر اختتامی سیشن جس میں شرکاء کے لیے تسلسلِ طلبِ علم کی وصیت، سرٹیفکیٹ کے اجراء کی ہدایات اور دعائے خیر کی جائے گی۔">
-              A concise 10-minute closing address with concluding advice for attendees, instructions on continuous talab al-‘ilm, issuance of Certificates of Attendance, and closing du‘ā’.
+            <p class="session-desc" data-en="A concise 10-minute closing address with concluding advice for attendees, guidance on continuous talab al-‘ilm, revision using the study material, and closing du‘ā’." data-ur="دس منٹ کا پرتاثیر اختتامی سیشن جس میں شرکاء کے لیے تسلسلِ طلبِ علم کی وصیت، فراہم کردہ کتب کے ذریعے دہرائی اور دعائے خیر کی جائے گی۔">
+              A concise 10-minute closing address with concluding advice for attendees, guidance on continuous talab al-‘ilm, revision using the study material, and closing du‘ā’.
             </p>
           </div>
           <div class="session-actions">
-            <a href="#certificate" class="session-action-btn" style="background:var(--gold);color:var(--bg-main);font-weight:700"><i class="fas fa-certificate"></i> Get Certificate</a>
+            <a href="#study-material" class="session-action-btn" style="background:var(--gold);color:var(--bg-main);font-weight:700"><i class="fas fa-book-reader"></i> Study Material</a>
             <button class="session-action-btn" onclick="copySessionInfo('Day 3 Closing Session: 12:30 AM IST / 12:00 AM PKT / 10:00 PM KSA')"><i class="fas fa-copy"></i> Copy Time</button>
           </div>
         </div>
@@ -1877,7 +1801,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="subject-icon-box"><i class="fas fa-shield-halved"></i></div>
         <div class="subject-discipline">‘Aqīdah &amp; Tawḥīd</div>
         <h3 class="subject-title">Kashf ash-Shubuhāt</h3>
-        <div class="subject-arabic">كشف الشبهات للإمام المجدد محمد بن عبد الوهاب</div>
+        <div class="subject-arabic">كشف الشبهات للإمام محمد بن عبد الوهاب</div>
         <div class="subject-teacher-badge"><i class="fas fa-chalkboard-user"></i> Ustadh Muhammad Abu Bakr al-Lahori</div>
         <p class="subject-desc">A foundational manual dismantling common philosophical and polytheistic doubts with decisive, unassailable proofs straight from the Holy Qur'an.</p>
       </div>
@@ -1979,7 +1903,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="faculty-card-body">
           <div class="faculty-avatar">MA</div>
           <h3 class="faculty-name">Shaykh Muhammad Aakif al-Makki</h3>
-          <div class="faculty-name-arabic">الشيخ محمد عاكف المکی</div>
+          <div class="faculty-name-arabic">الشيخ محمد عاكف المكي</div>
           <div class="faculty-role">Scholar of Fiqh &amp; Sunnah (Makkah al-Mukarramah)</div>
           <div class="faculty-subject-tag"><i class="fas fa-book"></i> Shurūṭ aṣ-Ṣalāh wa Arkānuhā</div>
           <ul class="bio-list">
@@ -2066,146 +1990,115 @@ body.urdu-mode .faq-trigger { text-align: right; }
   </div>
 </section>
 
-<!-- CERTIFICATE OF ATTENDANCE SECTION -->
-<section class="certificate-section section-padding" id="certificate">
+<!-- STUDENT STUDY MATERIAL SECTION -->
+<section class="material-section section-padding" id="study-material">
   <div class="container fade-in-section">
     <div class="text-center">
-      <div class="section-label" data-en="Scholastic Certification" data-ur="علمی تصدیق و سند">Scholastic Certification</div>
-      <h2 class="section-heading" data-en="Official Certificate of Attendance" data-ur="دورہ میں شرکت کا باضابطہ سرٹیفکیٹ">Official Certificate of Attendance</h2>
-      <p class="section-subtitle" data-en="Participants who complete the Dawrah receive an official verified Certificate of Attendance issued by the Ṭālib al-‘Ilm Project." data-ur="دورہ کے تمام سیشنز میں باقاعدہ شرکت کرنے والے طلبہ و طالبات کو مشروع طالب العلم کی جانب سے باضابطہ سرٹیفکیٹ دیا جائے گا۔">
-        Participants who complete the Dawrah receive an official verified Certificate of Attendance issued by the Ṭālib al-‘Ilm Project.
+      <div class="section-label" data-en="Coursepack &amp; Resources" data-ur="نصاب اور درسی مواد">Coursepack &amp; Resources</div>
+      <h2 class="section-heading" data-en="Student Study Material &amp; Mutūn" data-ur="طالب علم کا درسی مواد اور متون">Student Study Material &amp; Mutūn</h2>
+      <p class="section-subtitle" data-en="Access the official compiled coursepack for the First Dawrah ‘Ilmiyyah. Containing the complete classical texts, sanad diagrams, and structured notes." data-ur="پہلی دورہ علمیہ کا باضابطہ درسی کتابچہ، جس میں تمام متون، اسانید اور اہم علمی حواشی جمع کیے گئے ہیں۔">
+        Access the official compiled coursepack for the First Dawrah ‘Ilmiyyah. Containing the complete classical texts, sanad diagrams, and structured notes.
       </p>
     </div>
 
-    <div class="cert-generator-wrapper">
-      <!-- Certificate Generator Form -->
-      <div class="cert-controls-form">
-        <div class="cert-input-group">
-          <label for="certTitle" data-en="Honorific Title" data-ur="لقب">Honorific Title</label>
-          <select id="certTitle" class="cert-select" onchange="updateCertName()">
-            <option value="Brother">Brother</option>
-            <option value="Sister">Sister</option>
-            <option value="الأخ">الأخ (Brother - Ar)</option>
-            <option value="الأخت">الأخت (Sister - Ar)</option>
-          </select>
+    <!-- Main Material Hero Card -->
+    <div class="material-hero-card">
+      <div class="material-flex-layout">
+        <div class="material-visual-box">
+          <span class="material-pdf-badge">PDF DOCUMENT</span>
+          <div class="material-book-icon"><i class="fas fa-book-journal-whills"></i></div>
+          <div class="material-visual-title">Dawrah Coursepack</div>
+          <div class="material-visual-sub">Official Textual Compilation</div>
         </div>
-        <div class="cert-input-group">
-          <label for="certNameInput" data-en="Enter Attendee Full Name" data-ur="شریک کا مکمل نام درج کریں">Enter Attendee Full Name</label>
-          <input type="text" id="certNameInput" class="cert-input" placeholder="e.g. Abdullah bin Ahmad / Fatimah bint Khalid" value="Muhammad Abdullah" oninput="updateCertName()">
-        </div>
-        <div class="cert-input-group" style="align-self: flex-end;">
-          <button class="btn btn-primary" onclick="window.print()" style="padding:0.75rem 1.4rem"><i class="fas fa-print"></i> <span data-en="Print / PDF" data-ur="پرنٹ / پی ڈی ایف">Print / PDF</span></button>
-        </div>
-      </div>
 
-      <!-- Printable / Previewable Certificate Sheet -->
-      <div class="cert-frame-outer" id="printableCertificate">
-        <div class="cert-sheet">
-          <div class="cert-border-outer">
-            <div class="cert-border-inner">
+        <div class="material-details-box">
+          <h3 class="material-main-heading" data-en="The First Dawrah ‘Ilmiyyah Official Study Packet" data-ur="الدورة العلمية الأولى — درسی کتابچہ برائے طلبہ">The First Dawrah ‘Ilmiyyah Official Study Packet</h3>
+          <div class="material-arabic-title">مذكرة نصوص ومتون الدورة العلمية الأولى</div>
+          <p class="material-description" data-en="This comprehensive study guide compiles all the seven treatises taught throughout the three-day seminar. Students are highly advised to download the PDF, print or review it prior to the sessions, and utilize it for taking marginal notes (ḥawāshī) and marking scholarly benefits directly with the Mashāyikh." data-ur="یہ جامع درسی کتابچہ دورہ کے تمام سات متون پر مشتمل ہے۔ شرکاء کو تاکید کی جاتی ہے کہ وہ سیشنز شروع ہونے سے قبل اس پی ڈی ایف کو ڈاؤن لوڈ کریں یا پرنٹ کر لیں، تاکہ دورانِ درس مشائخ کے افادات اور فوائد کو اپنے پاس قلمبند کر سکیں۔">
+            This comprehensive study guide compiles all the seven treatises taught throughout the three-day seminar. Students are highly advised to download the PDF, print or review it prior to the sessions, and utilize it for taking marginal notes (ḥawāshī) and marking scholarly benefits directly with the Mashāyikh.
+          </p>
 
-              <!-- Decorative Corners -->
-              <div class="cert-corner top-left"></div>
-              <div class="cert-corner top-right"></div>
-              <div class="cert-corner bottom-left"></div>
-              <div class="cert-corner bottom-right"></div>
-
-              <!-- Watermark -->
-              <div class="cert-watermark"></div>
-
-              <!-- Certificate Header -->
-              <div class="cert-header">
-                <div class="cert-bismillah">﷽</div>
-                <div class="cert-main-title">Certificate of Attendance</div>
-                <div class="cert-sub-title">The First Dawrah ‘Ilmiyyah — Ṭālib al-‘Ilm Project</div>
-              </div>
-
-              <!-- Certification Statement -->
-              <div class="cert-body-text">
-                The organisers of the <strong>Ṭālib al-‘Ilm Project</strong> hereby certify that<br>
-                <span id="certTitleDisplay" style="font-size:1.15rem;color:#80621a;font-weight:600">Brother</span>
-                <span class="cert-name-highlight" id="certNameDisplay">Muhammad Abdullah</span><br>
-                attended the sessions of the <strong>First Dawrah ‘Ilmiyyah</strong>, held online on <strong>Saturday, Sunday and Monday (7–9 November 2026)</strong>, which comprised:
-              </div>
-
-              <!-- Subjects & Teachers Table -->
-              <table class="cert-table">
-                <thead>
-                  <tr>
-                    <th style="width: 58%;">Subject</th>
-                    <th style="width: 42%;">Teacher</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="subject-col"><strong>The Importance of Ikhlāṣ: Ḥadīth “Innamā al-A‘māl bin-Niyyāt”</strong></td>
-                    <td class="teacher-col">Shaykh Zafar Alam bin Ziya ur-Rahman al-Athari</td>
-                  </tr>
-                  <tr>
-                    <td class="subject-col"><strong>Shurūṭ aṣ-Ṣalāh wa Arkānuhā wa Wājibātuhā</strong></td>
-                    <td class="teacher-col">Shaykh Muhammad Aakif al-Makki</td>
-                  </tr>
-                  <tr>
-                    <td class="subject-col"><strong>Tafsīr of Sūrah al-Fātiḥah and Sūrah al-Kahf</strong></td>
-                    <td class="teacher-col">Shaykh Hassan Sarim</td>
-                  </tr>
-                  <tr>
-                    <td class="subject-col"><strong>Kashf ash-Shubuhāt</strong></td>
-                    <td class="teacher-col">Ustadh Muhammad Abu Bakr bin Yasir al-Lahori</td>
-                  </tr>
-                  <tr>
-                    <td class="subject-col"><strong>Al-Ḥadīth al-Musalsal bil-Awwaliyyah</strong></td>
-                    <td class="teacher-col">Abu Mu‘awiyah Muhammad Qurayshi al-Athari</td>
-                  </tr>
-                  <tr>
-                    <td class="subject-col"><strong>Al-Qaṣīdah al-Waḍḍāḥiyyah</strong></td>
-                    <td class="teacher-col">Abu Mu‘awiyah Muhammad Qurayshi al-Athari</td>
-                  </tr>
-                  <tr>
-                    <td class="subject-col"><strong>Bāb al-Ḥayḍ from ad-Durar al-Bahiyyah (sisters)</strong></td>
-                    <td class="teacher-col">Ustadhah Bint Raees Ahmad al-Khadeejiyyah al-Athariyyah</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <!-- Concluding Du'a -->
-              <div class="cert-dua">
-                <div class="cert-dua-ar">نسأل الله أن ينفعهم بما سمعوا، وأن يجعلهم من أهل العلم العاملين به</div>
-                <div class="cert-dua-en">“We ask Allah to benefit them through what they have heard, and to make them among the people of knowledge who act upon it.”</div>
-              </div>
-
-              <!-- Signatures & Official Seal -->
-              <div class="cert-footer-row">
-                <div class="cert-sig-box">
-                  <div class="cert-sig-line"></div>
-                  <div class="cert-sig-title">Shaykh Zafar Alam al-Athari</div>
-                  <div class="cert-sig-dept">Academic Supervisor</div>
-                </div>
-
-                <div class="cert-seal-badge">
-                  <i class="fas fa-stamp" style="font-size:1.1rem;margin-bottom:2px"></i>
-                  <span>ṬĀLIB AL-‘ILM<br>OFFICIAL SEAL</span>
-                </div>
-
-                <div class="cert-sig-box">
-                  <div class="cert-sig-line"></div>
-                  <div class="cert-sig-title">Abu Mu‘awiyah al-Athari</div>
-                  <div class="cert-sig-dept">Initiative Lead &amp; Instructor</div>
-                </div>
-              </div>
-
-            </div>
+          <div class="material-buttons-row">
+            <a href="https://drive.google.com/file/d/1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">
+              <i class="fab fa-google-drive"></i> <span data-en="Open in Google Drive" data-ur="گوگل ڈرائیو پر کھولیں">Open in Google Drive</span>
+            </a>
+            <a href="https://drive.google.com/uc?export=download&id=1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW" target="_blank" rel="noopener" class="btn btn-outline">
+              <i class="fas fa-download"></i> <span data-en="Direct Download" data-ur="براہ راست ڈاؤن لوڈ">Direct Download</span>
+            </a>
+            <button class="btn btn-outline" onclick="toggleDrivePreview()">
+              <i class="fas fa-eye"></i> <span id="previewBtnText" data-en="Preview Document Online" data-ur="آن لائن پیش نظارہ کریں">Preview Document Online</span>
+            </button>
+            <button class="btn btn-outline" onclick="copyMaterialLink()">
+              <i class="fas fa-link"></i> <span data-en="Copy Link" data-ur="لنک کاپی کریں">Copy Link</span>
+            </button>
           </div>
         </div>
       </div>
-
-      <!-- Action Buttons -->
-      <div class="cert-action-buttons">
-        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-file-pdf"></i> Download / Print Official Certificate</button>
-        <button class="btn btn-outline" onclick="shareCertificate()"><i class="fas fa-share-nodes"></i> Share Details</button>
-      </div>
-
     </div>
+
+    <!-- Embedded Google Drive Preview (Collapsible) -->
+    <div class="embed-preview-wrapper" id="driveEmbedWrapper">
+      <div class="embed-preview-header">
+        <span class="embed-preview-title"><i class="fas fa-file-pdf"></i> <span data-en="Google Drive Document Viewer" data-ur="گوگل ڈرائیو دستاویز پیش نظارہ">Google Drive Document Viewer</span></span>
+        <button class="embed-close-btn" onclick="toggleDrivePreview()" aria-label="Close Preview"><i class="fas fa-times"></i></button>
+      </div>
+      <iframe id="driveIframe" class="embed-iframe" src="" allow="autoplay" title="Study Material PDF Viewer"></iframe>
+    </div>
+
+    <!-- Texts Included in Coursepack Grid -->
+    <div class="material-mutun-title" data-en="Treatises Included Within The Study Guide" data-ur="کتابچے میں شامل تمام متون کی فہرست">Treatises Included Within The Study Guide</div>
+    <div class="material-mutun-grid">
+      <div class="mutun-item">
+        <div class="mutun-num">1</div>
+        <div class="mutun-info">
+          <h4>Ḥadīth al-A‘māl bin-Niyyāt</h4>
+          <p>Text of Hadith Umar with classical annotations on sincerity</p>
+        </div>
+      </div>
+      <div class="mutun-item">
+        <div class="mutun-num">2</div>
+        <div class="mutun-info">
+          <h4>Kashf ash-Shubuhāt</h4>
+          <p>Full treatise of Shaykh al-Islam Muhammad ibn Abd al-Wahhab</p>
+        </div>
+      </div>
+      <div class="mutun-item">
+        <div class="mutun-num">3</div>
+        <div class="mutun-info">
+          <h4>Shurūṭ aṣ-Ṣalāh wa Arkānuhā</h4>
+          <p>Jurisprudential manual on pillars and prerequisites of Salah</p>
+        </div>
+      </div>
+      <div class="mutun-item">
+        <div class="mutun-num">4</div>
+        <div class="mutun-info">
+          <h4>Bāb al-Ḥayḍ (ad-Durar al-Bahiyyah)</h4>
+          <p>Imam ash-Shawkani’s concise legal text on menstrual rulings</p>
+        </div>
+      </div>
+      <div class="mutun-item">
+        <div class="mutun-num">5</div>
+        <div class="mutun-info">
+          <h4>Al-Ḥadīth al-Musalsal bil-Awwaliyyah</h4>
+          <p>The Hadith of Mercy with continuous Isnad chain</p>
+        </div>
+      </div>
+      <div class="mutun-item">
+        <div class="mutun-num">6</div>
+        <div class="mutun-info">
+          <h4>Al-Qaṣīdah al-Waḍḍāḥiyyah</h4>
+          <p>The classical poetic ode in honor of Mother of the Believers</p>
+        </div>
+      </div>
+      <div class="mutun-item">
+        <div class="mutun-num">7</div>
+        <div class="mutun-info">
+          <h4>Tafsīr Sūrah al-Fātiḥah &amp; al-Kahf</h4>
+          <p>Exegesis outlines and thematic lesson sheets</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -2230,11 +2123,11 @@ body.urdu-mode .faq-trigger { text-align: right; }
       </div>
 
       <div class="reg-card" style="border-color:var(--gold)">
-        <div class="reg-card-icon"><i class="fas fa-award"></i></div>
-        <h3 class="reg-card-title" data-en="Certificate Included" data-ur="سرٹیفکیٹ شامل">Certificate Included</h3>
-        <div class="reg-card-fee">VERIFIED</div>
-        <p class="reg-card-desc" data-en="Eligible participants who attend all sessions will receive the official signed Certificate of Attendance." data-ur="تمام مجالس میں حاضر رہنے والے شرکاء کو تصدیق شدہ سرٹیفکیٹ برائے حاضری و شرکت دیا جائے گا۔">Eligible participants who attend all sessions will receive the official signed Certificate of Attendance.</p>
-        <a href="https://wa.me/+923357696999?text=Assalamu%20Alaykum%2C%20I%20want%20to%20enroll%20for%20the%20Dawrah%20Ilmiyyah" target="_blank" class="btn btn-primary" style="width:100%"><i class="fab fa-whatsapp"></i> Register Pakistan</a>
+        <div class="reg-card-icon"><i class="fas fa-book-open-reader"></i></div>
+        <h3 class="reg-card-title" data-en="Study Material Included" data-ur="مکمل درسی مواد شامل">Study Material Included</h3>
+        <div class="reg-card-fee">ACCESS</div>
+        <p class="reg-card-desc" data-en="The complete official compiled PDF coursepack is provided freely for all students to follow along." data-ur="تمام شرکاء کے لیے کتب و متون پر مشتمل درسی کتابچہ مفت فراہم کر دیا گیا ہے۔">The complete official compiled PDF coursepack is provided freely for all students to follow along.</p>
+        <a href="#study-material" class="btn btn-primary" style="width:100%"><i class="fas fa-file-pdf"></i> Download Coursepack</a>
       </div>
 
       <div class="reg-card">
@@ -2264,17 +2157,17 @@ body.urdu-mode .faq-trigger { text-align: right; }
           <i class="fas fa-chevron-down"></i>
         </button>
         <div class="faq-content">
-          <p data-en="Yes, authenticated cloud recordings will be accessible to registered students for revision. However, live attendance is highly encouraged to gain the full benefit and qualify for the Certificate of Attendance." data-ur="جی ہاں، رجسٹرڈ طلبہ کے لیے نجی کلاؤڈ ریکارڈنگز دہرائی کے لیے فراہم کی جائیں گی، تاہم لائیو شرکت سرٹیفکیٹ اور برکت کے لیے انتہائی مستحسن ہے۔">Yes, authenticated cloud recordings will be accessible to registered students for revision. However, live attendance is highly encouraged to gain the full benefit and qualify for the Certificate of Attendance.</p>
+          <p data-en="Yes, authenticated cloud recordings will be accessible to registered students for revision. However, live attendance is highly encouraged to gain the full benefit directly from the scholars." data-ur="جی ہاں، رجسٹرڈ طلبہ کے لیے نجی کلاؤڈ ریکارڈنگز دہرائی کے لیے فراہم کی جائیں گی، تاہم براہِ راست شرکت زیادہ بابرکت اور مفید ہے۔">Yes, authenticated cloud recordings will be accessible to registered students for revision. However, live attendance is highly encouraged to gain the full benefit directly from the scholars.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger">
-          <span data-en="How do I qualify for the Certificate of Attendance?" data-ur="سرٹیفکیٹ حاصل کرنے کی شرائط کیا ہیں؟">How do I qualify for the Certificate of Attendance?</span>
+          <span data-en="How do I access the Student Study Material?" data-ur="طالب علم کا درسی مواد کیسے حاصل کریں؟">How do I access the Student Study Material?</span>
           <i class="fas fa-chevron-down"></i>
         </button>
         <div class="faq-content">
-          <p data-en="Attendees must register through WhatsApp or our official portal, attend the sessions across the three days (7–9 November 2026), and confirm their presence in the attendance roster." data-ur="طلبہ کو واٹس ایپ یا ہمارے پورٹل کے ذریعے پیشگی رجسٹریشن کروانی ہوگی اور تینوں ایام (7 تا 9 نومبر 2026) کے سیشنز میں حاضری دینی ہوگی۔">Attendees must register through WhatsApp or our official portal, attend the sessions across the three days (7–9 November 2026), and confirm their presence in the attendance roster.</p>
+          <p data-en="The complete compiled coursepack containing all 7 treatises is hosted on Google Drive. You can open, preview, and download it from the Study Material section of this page." data-ur="ساتوں متون پر مشتمل مکمل درسی کتابچہ گوگل ڈرائیو پر اپلوڈ ہے، جسے آپ اسی صفحے کے مطالعاتی مواد سیکشن سے باآسانی ڈاؤن لوڈ کر سکتے ہیں۔">The complete compiled coursepack containing all 7 treatises is hosted on Google Drive. You can open, preview, and download it from the Study Material section of this page.</p>
         </div>
       </div>
     </div>
@@ -2286,7 +2179,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
 <footer class="footer">
   <div class="container">
     <div class="footer-hadith">
-      <div class="arabic">مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ</div>
+      <div class="arabic">من سلك طريقا يلتمس فيه علما سهل الله له به طريقا إلى الجنة</div>
       <div class="en" data-en="“Whoever treads a path seeking knowledge, Allah will make easy for him a path to Paradise.”" data-ur="”جو شخص حصولِ علم کے لیے کسی راستے پر چلتا ہے، اللہ تعالیٰ اس کے بدلے میں اس کے لیے جنت کا راستہ آسان فرما دیتا ہے۔“">“Whoever treads a path seeking knowledge, Allah will make easy for him a path to Paradise.”</div>
       <div class="source" data-en="— Ṣaḥīḥ Muslim 2699" data-ur="— صحیح مسلم: 2699">— Ṣaḥīḥ Muslim 2699</div>
     </div>
@@ -2354,9 +2247,6 @@ body.urdu-mode .faq-trigger { text-align: right; }
         el.innerHTML = val;
       }
     });
-
-    // Update certificate honorific in preview
-    updateCertName();
   }
 
   toggleBtns.forEach(function(b){
@@ -2419,16 +2309,30 @@ body.urdu-mode .faq-trigger { text-align: right; }
     }
   };
 
-  /* ── CERTIFICATE LIVE UPDATER ── */
-  window.updateCertName = function(){
-    const input = document.getElementById('certNameInput');
-    const titleSelect = document.getElementById('certTitle');
-    const nameDisplay = document.getElementById('certNameDisplay');
-    const titleDisplay = document.getElementById('certTitleDisplay');
+  /* ── GOOGLE DRIVE PREVIEW EMBED TOGGLER ── */
+  window.toggleDrivePreview = function(){
+    const wrapper = document.getElementById('driveEmbedWrapper');
+    const iframe = document.getElementById('driveIframe');
+    const previewUrl = 'https://drive.google.com/file/d/1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW/preview';
+    const isOpen = wrapper.classList.toggle('open');
+    if(isOpen){
+      if(!iframe.src || iframe.src === 'about:blank'){
+        iframe.src = previewUrl;
+      }
+      wrapper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  };
 
-    const val = input.value.trim();
-    nameDisplay.textContent = val ? val : (isUrdu ? 'شریک کا نام' : 'Participant Name');
-    titleDisplay.textContent = titleSelect.value;
+  /* ── COPY MATERIAL LINK ── */
+  window.copyMaterialLink = function(){
+    const link = 'https://drive.google.com/file/d/1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW/view?usp=sharing';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(function(){
+        alert('Student Study Material link copied to clipboard:\n' + link);
+      });
+    } else {
+      prompt('Study Material Link:', link);
+    }
   };
 
   /* ── COPY SESSION INFO ── */
@@ -2439,17 +2343,6 @@ body.urdu-mode .faq-trigger { text-align: right; }
       });
     } else {
       prompt('Copy session details:', text);
-    }
-  };
-
-  /* ── SHARE CERTIFICATE DETAILS ── */
-  window.shareCertificate = function(){
-    const name = document.getElementById('certNameInput').value.trim() || 'Student';
-    const text = 'The First Dawrah ‘Ilmiyyah (7–9 Nov 2026) by Ṭālib al-‘Ilm Project. Join online with scholars of the Sunnah!';
-    if(navigator.share){
-      navigator.share({ title: 'First Dawrah Ilmiyyah', text: text, url: window.location.href });
-    } else {
-      copySessionInfo(text + ' ' + window.location.href);
     }
   };
 
