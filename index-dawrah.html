@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The First Dawrah ‘Ilmiyyah by Ṭālib al-‘Ilm Project · Madrassa Al-Athariyyah · 7–9 November 2026 featuring renowned scholars of the Sunnah with official Student Study Material.">
-<meta name="keywords" content="Dawrah Ilmiyyah, Talib al-Ilm, Islamic Course, Madrassa Al-Athariyyah, Hadith, Aqeedah, Fiqh, Tafsir, Salafi, Mutun, Study Material">
-<meta property="og:title" content="The First Dawrah ‘Ilmiyyah — Ṭālib al-‘Ilm Project · 7–9 Nov 2026">
-<meta property="og:description" content="Three days of classical Islamic studies with scholars of the Sunnah covering Hadith, Aqeedah, Fiqh, Tafsir, and Mutun. Download official Student Study Material.">
+<meta name="description" content="The First Dawrah ‘Ilmiyyah · Ṭālib al-‘Ilm Project · 7-9 November 2026. A 3-day online intensive covering foundational Islamic texts with scholars.">
+<meta name="keywords" content="Dawrah Ilmiyyah, Talib al-Ilm, Islamic Course, Hadith, Aqeedah, Fiqh, Tafsir, Salafi, Mutun, Study Material">
+<meta property="og:title" content="The First Dawrah ‘Ilmiyyah · Ṭālib al-‘Ilm Project · 7-9 Nov 2026">
+<meta property="og:description" content="A 3-day online intensive covering foundational texts in Hadith, Aqeedah, Fiqh, and Tafsir with scholars.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#08120c">
 <title>The First Dawrah ‘Ilmiyyah · Ṭālib al-‘Ilm Project</title>
@@ -14,7 +14,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Nastaliq+Urdu:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
 
 <style>
@@ -56,7 +56,7 @@
   --sister-bg: rgba(216, 128, 156, 0.12);
   --font-heading: 'Cinzel', serif;
   --font-body: 'Lora', serif;
-  --font-arabic: '29LT Adir', 'Amiri', serif;
+  --font-arabic: '29LT Adir', serif;
   --font-urdu: 'Noto Nastaliq Urdu', '29LT Adir', serif;
   --nav-height: 68px;
   --radius: 12px;
@@ -71,12 +71,12 @@ body {
   font-family: var(--font-body);
   background: var(--bg-main);
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.65;
   overflow-x: hidden;
   transition: direction 0.3s;
 }
 
-/* ── ARABIC TYPOGRAPHY RULES (29LT ADIR & CLEAN SPACING) ── */
+/* ── ARABIC TYPOGRAPHY (29LT ADIR · BOLD & CLEAN) ── */
 .bismillah-calligraphy,
 .hero-arabic-title,
 .session-subject-arabic,
@@ -86,60 +86,58 @@ body {
 .material-arabic,
 .arabic-text {
   font-family: var(--font-arabic) !important;
+  font-weight: 700 !important;
   letter-spacing: 0 !important;
-  word-spacing: 0.08em;
-  line-height: 1.6;
+  word-spacing: 0.06em;
+  line-height: 1.5;
 }
 
-/* Urdu Mode Styles */
+/* Urdu Mode */
 body.urdu-mode {
   font-family: var(--font-urdu);
   direction: rtl;
   line-height: 2.1;
 }
 body.urdu-mode .nav-links { flex-direction: row-reverse; }
-body.urdu-mode .feature-badges { flex-direction: row-reverse; }
-body.urdu-mode .timeline-slot { border-left: none; border-right: 3px solid var(--gold); padding-left: 0; padding-right: 1.5rem; }
 body.urdu-mode .subject-card { text-align: right; }
-body.urdu-mode .bio-list { text-align: right; padding-left: 0; padding-right: 1.2rem; }
 body.urdu-mode * { letter-spacing: 0 !important; }
 
-a { color: var(--gold); text-decoration: none; transition: color 0.3s ease; }
+a { color: var(--gold); text-decoration: none; transition: color 0.25s ease; }
 a:hover { color: var(--gold-lt); }
 
 /* Typography Helpers */
 .section-label {
   font-family: var(--font-heading);
-  font-size: 0.78rem;
-  letter-spacing: 3px;
+  font-size: 0.76rem;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 .section-label::before, .section-label::after {
   content: "♦";
   color: var(--gold);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   opacity: 0.8;
 }
 .section-heading {
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(1.7rem, 3.8vw, 2.4rem);
   color: var(--text);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   line-height: 1.25;
 }
 .section-subtitle {
   color: var(--text-muted);
-  max-width: 680px;
-  margin: 0 auto 2.8rem;
-  font-size: 0.98rem;
+  max-width: 620px;
+  margin: 0 auto 2.4rem;
+  font-size: 0.95rem;
 }
-.section-padding { padding: 5.5rem 1.5rem; }
-.container { max-width: 1140px; margin: 0 auto; }
+.section-padding { padding: 4.8rem 1.5rem; }
+.container { max-width: 1100px; margin: 0 auto; }
 .text-center { text-align: center; }
 
 /* ── NAVBAR ── */
@@ -152,7 +150,7 @@ a:hover { color: var(--gold-lt); }
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  transition: background 0.4s, box-shadow 0.4s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 .navbar.scrolled {
   background: rgba(8, 18, 12, 0.92);
@@ -161,14 +159,14 @@ a:hover { color: var(--gold-lt); }
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(201,168,76,0.15);
 }
-.nav-brand-wrap { display: flex; align-items: center; gap: 0.8rem; }
+.nav-brand-wrap { display: flex; align-items: center; gap: 0.75rem; }
 .nav-brand-icon {
-  width: 38px; height: 38px;
+  width: 36px; height: 36px;
   border-radius: 50%;
   border: 1px solid var(--gold);
   display: flex; align-items: center; justify-content: center;
   color: var(--gold);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   background: rgba(201,168,76,0.1);
 }
 .nav-brand {
@@ -183,7 +181,7 @@ a:hover { color: var(--gold-lt); }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.4rem;
   list-style: none;
 }
 .nav-links a {
@@ -192,7 +190,7 @@ a:hover { color: var(--gold-lt); }
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--text-muted);
-  transition: color 0.3s;
+  transition: color 0.25s;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--gold); }
 .nav-cta-btn {
@@ -213,9 +211,9 @@ a:hover { color: var(--gold-lt); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
-  height: 36px;
-  padding: 0 1rem;
+  gap: 0.4rem;
+  height: 34px;
+  padding: 0 0.9rem;
   border-radius: 20px;
   background: rgba(201, 168, 76, 0.08);
   border: 1px solid rgba(201, 168, 76, 0.35);
@@ -223,14 +221,13 @@ a:hover { color: var(--gold-lt); }
   font-size: 0.82rem;
   font-family: var(--font-heading);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   white-space: nowrap;
 }
 .lang-toggle:hover {
   background: rgba(201, 168, 76, 0.2);
   border-color: var(--gold);
   color: var(--gold-lt);
-  transform: translateY(-1px);
 }
 .lang-toggle i { font-size: 0.85rem; }
 .hamburger {
@@ -249,25 +246,24 @@ a:hover { color: var(--gold-lt); }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 .mobile-drawer {
-  position: fixed; top: 0; right: -100%; width: 290px; height: 100vh;
+  position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
   background: rgba(13, 26, 19, 0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 1050;
   display: flex; flex-direction: column;
-  padding: 5.5rem 2rem 2rem;
-  gap: 1.4rem;
-  transition: right 0.4s ease;
+  padding: 5.5rem 1.8rem 2rem;
+  gap: 1.3rem;
+  transition: right 0.35s ease;
   border-left: 1px solid var(--card-border);
 }
 .mobile-drawer.open { right: 0; }
 .mobile-drawer a {
   font-family: var(--font-heading);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--text-muted);
-  transition: color 0.3s;
 }
 .mobile-drawer a:hover { color: var(--gold); }
 .drawer-overlay {
@@ -275,7 +271,7 @@ a:hover { color: var(--gold-lt); }
   background: rgba(0, 0, 0, 0.65);
   z-index: 1040;
   opacity: 0; pointer-events: none;
-  transition: opacity 0.4s;
+  transition: opacity 0.35s;
 }
 .drawer-overlay.open { opacity: 1; pointer-events: auto; }
 
@@ -287,12 +283,12 @@ a:hover { color: var(--gold-lt); }
 /* ── HERO ── */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: calc(var(--nav-height) + 2.5rem) 1.5rem 4rem;
+  padding: calc(var(--nav-height) + 2rem) 1.5rem 3.5rem;
   overflow: hidden;
 }
 .hero-bg {
@@ -304,29 +300,28 @@ a:hover { color: var(--gold-lt); }
     var(--bg-main);
 }
 .hero-pattern {
-  position: absolute; inset: 0; z-index: 1; opacity: 0.045;
+  position: absolute; inset: 0; z-index: 1; opacity: 0.04;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%23c9a84c' stroke-width='.5'/%3E%3Cpath d='M30 10L50 30L30 50L10 30Z' fill='none' stroke='%23c9a84c' stroke-width='.3'/%3E%3C/svg%3E");
   background-size: 60px 60px;
 }
 #heroCanvas { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
-.hero-content { position: relative; z-index: 3; max-width: 860px; }
+.hero-content { position: relative; z-index: 3; max-width: 820px; }
 
 .bismillah-calligraphy {
   font-size: clamp(1.4rem, 3.2vw, 2.1rem);
   color: var(--gold);
-  line-height: 1.5;
-  margin-bottom: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
 }
 .hero-arabic-title {
-  font-size: clamp(2rem, 5.5vw, 3.4rem);
-  font-weight: 700;
+  font-size: clamp(2rem, 5.5vw, 3.3rem);
   color: var(--text);
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
+  margin-bottom: 0.3rem;
+  line-height: 1.35;
 }
 .hero-en-title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-size: clamp(1.9rem, 4.8vw, 3.2rem);
   font-weight: 800;
   background: var(--gold-gradient);
   -webkit-background-clip: text;
@@ -334,21 +329,21 @@ a:hover { color: var(--gold-lt); }
   background-clip: text;
   letter-spacing: 2px;
   line-height: 1.15;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 .dawrah-tagline {
   font-family: var(--font-heading);
-  font-size: clamp(0.85rem, 2vw, 1.05rem);
-  letter-spacing: 2.5px;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--gold-lt);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 .hero-dates-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 0.5rem 1.4rem;
+  gap: 0.6rem;
+  padding: 0.45rem 1.2rem;
   background: var(--gold-badge-bg);
   border: 1px solid var(--gold);
   border-radius: 30px;
@@ -357,41 +352,38 @@ a:hover { color: var(--gold-lt); }
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 1.8rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
 }
-.hero-dates-pill i { font-size: 0.9rem; color: var(--gold); }
+.hero-dates-pill i { font-size: 0.85rem; color: var(--gold); }
 .hero-desc {
-  font-size: clamp(0.95rem, 2.4vw, 1.12rem);
+  font-size: clamp(0.95rem, 2.2vw, 1.08rem);
   color: var(--text);
-  max-width: 680px;
-  margin: 0 auto 2rem;
-  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto 1.8rem;
+  line-height: 1.7;
 }
 
 /* Hero Action Buttons */
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 1rem;
   justify-content: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.9rem 1.8rem;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
-  font-size: 0.82rem;
-  letter-spacing: 1.2px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  position: relative;
-  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
   text-decoration: none;
 }
 .btn-primary {
@@ -401,7 +393,7 @@ a:hover { color: var(--gold-lt); }
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
 }
 .btn-outline {
   background: rgba(201,168,76,0.06);
@@ -423,7 +415,7 @@ a:hover { color: var(--gold-lt); }
 .btn-green:hover {
   background: var(--green-lt);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(46, 107, 69, 0.4);
+  box-shadow: 0 6px 18px rgba(46, 107, 69, 0.4);
 }
 
 /* ── COUNTDOWN TIMER ── */
@@ -431,35 +423,33 @@ a:hover { color: var(--gold-lt); }
   background: rgba(19, 34, 25, 0.7);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
-  padding: 1.2rem 1.5rem;
+  padding: 1rem 1.4rem;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  margin-top: 0.5rem;
 }
 .countdown-title {
   font-family: var(--font-heading);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 .countdown-grid {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.1rem;
 }
 .countdown-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 52px;
+  min-width: 48px;
 }
 .countdown-num {
   font-family: var(--font-heading);
-  font-size: 1.7rem;
+  font-size: 1.55rem;
   font-weight: 700;
   color: var(--text);
   line-height: 1;
@@ -469,7 +459,7 @@ a:hover { color: var(--gold-lt); }
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text-muted);
-  margin-top: 0.3rem;
+  margin-top: 0.25rem;
 }
 
 /* ── KEY STATS BAR ── */
@@ -477,36 +467,36 @@ a:hover { color: var(--gold-lt); }
   background: var(--bg-secondary);
   border-top: 1px solid var(--card-border);
   border-bottom: 1px solid var(--card-border);
-  padding: 2.2rem 1.5rem;
+  padding: 1.8rem 1.5rem;
 }
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  max-width: 1050px;
+  gap: 1.2rem;
+  max-width: 950px;
   margin: 0 auto;
 }
 @media(max-width: 768px){
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 }
 .stat-item {
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.4rem;
 }
 .stat-icon {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 .stat-number {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--text);
   line-height: 1.1;
 }
 .stat-title {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -523,20 +513,20 @@ a:hover { color: var(--gold-lt); }
   background: var(--card-surface);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
-  padding: 1.2rem;
-  margin-bottom: 2.5rem;
+  padding: 1rem 1.2rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 .timezone-label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-heading);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--gold);
@@ -544,16 +534,16 @@ a:hover { color: var(--gold-lt); }
 .tz-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 .tz-btn {
   background: rgba(255,255,255,0.04);
   border: 1px solid var(--card-border);
   color: var(--text-muted);
-  padding: 0.45rem 1rem;
+  padding: 0.4rem 0.9rem;
   border-radius: 20px;
   font-family: var(--font-heading);
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -568,68 +558,60 @@ a:hover { color: var(--gold-lt); }
   color: var(--bg-main);
   border-color: var(--gold);
   font-weight: 700;
-  box-shadow: 0 2px 10px rgba(201,168,76,0.3);
 }
 
 /* Day Tabs */
 .day-tabs {
   display: flex;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 .day-tab-btn {
   background: var(--card-surface);
   border: 1px solid var(--card-border);
   color: var(--text-muted);
-  padding: 0.75rem 1.6rem;
+  padding: 0.65rem 1.4rem;
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
-  font-size: 0.82rem;
-  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.25s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 170px;
+  min-width: 150px;
 }
-.day-tab-btn span.day-title { font-weight: 700; font-size: 0.95rem; color: var(--text); }
+.day-tab-btn span.day-title { font-weight: 700; font-size: 0.92rem; color: var(--text); }
 .day-tab-btn span.day-sub { font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-body); }
-.day-tab-btn:hover { border-color: var(--gold); transform: translateY(-2px); }
+.day-tab-btn:hover { border-color: var(--gold); }
 .day-tab-btn.active {
   background: rgba(201, 168, 76, 0.12);
   border-color: var(--gold);
-  box-shadow: 0 4px 18px rgba(201, 168, 76, 0.15);
 }
 .day-tab-btn.active span.day-title { color: var(--gold); }
 
-/* Day Schedule Container */
+/* Day Panels */
 .day-panel { display: none; }
-.day-panel.active { display: block; animation: fadeIn 0.4s ease; }
+.day-panel.active { display: block; animation: fadeIn 0.35s ease; }
 
 .day-header-card {
   background: var(--card-surface);
-  border-left: 4px solid var(--gold);
+  border-left: 3px solid var(--gold);
   border-radius: var(--radius-sm);
-  padding: 1rem 1.5rem;
-  margin-bottom: 1.8rem;
+  padding: 0.85rem 1.2rem;
+  margin-bottom: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.6rem;
 }
 .day-header-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--text);
-}
-.day-header-date {
-  font-size: 0.85rem;
-  color: var(--gold);
-  letter-spacing: 1px;
 }
 
 /* Session Cards */
@@ -637,27 +619,23 @@ a:hover { color: var(--gold-lt); }
   background: var(--card-surface);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
-  margin-bottom: 1.4rem;
-  padding: 1.6rem;
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 1.2rem;
+  padding: 1.35rem 1.5rem;
+  transition: transform 0.25s, border-color 0.25s;
   position: relative;
-  overflow: hidden;
 }
 .session-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; bottom: 0;
-  width: 4px;
+  width: 3px;
   background: var(--gold);
-  opacity: 0.6;
-  transition: opacity 0.3s;
+  opacity: 0.7;
 }
 .session-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: rgba(201,168,76,0.5);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
-.session-card:hover::before { opacity: 1; }
 
 .session-card.sisters-session {
   border-color: rgba(216, 128, 156, 0.4);
@@ -670,13 +648,13 @@ a:hover { color: var(--gold-lt); }
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
 }
-.session-tag-group { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+.session-tag-group { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
 .session-badge {
-  padding: 0.25rem 0.8rem;
-  border-radius: 14px;
+  padding: 0.2rem 0.65rem;
+  border-radius: 12px;
   font-family: var(--font-heading);
   font-size: 0.68rem;
   letter-spacing: 1px;
@@ -684,9 +662,6 @@ a:hover { color: var(--gold-lt); }
   background: rgba(201, 168, 76, 0.12);
   border: 1px solid rgba(201, 168, 76, 0.3);
   color: var(--gold);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
 }
 .session-badge.sisters {
   background: var(--sister-bg);
@@ -699,26 +674,25 @@ a:hover { color: var(--gold-lt); }
   color: #72d997;
 }
 
-/* Time Comparison Pill */
+/* Time Pills */
 .session-times-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   background: rgba(8, 18, 12, 0.7);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.06);
 }
 .time-pill {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  padding: 0.15rem 0.5rem;
-  border-radius: 12px;
-  transition: all 0.2s;
+  gap: 0.25rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 10px;
 }
 .time-pill strong { color: var(--text); font-family: var(--font-heading); }
 .time-pill.highlight {
@@ -731,7 +705,7 @@ a:hover { color: var(--gold-lt); }
 .session-body {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 1.5rem;
+  gap: 1.2rem;
   align-items: center;
 }
 @media(max-width: 768px){
@@ -739,46 +713,37 @@ a:hover { color: var(--gold-lt); }
 }
 .session-subject {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--text);
-  margin-bottom: 0.4rem;
-  line-height: 1.35;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
 }
 .session-subject-arabic {
   font-size: 1.25rem;
   color: var(--gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   direction: rtl;
 }
 .session-teacher-row {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   color: var(--gold-lt);
-  font-size: 0.92rem;
-  margin-top: 0.4rem;
+  font-size: 0.9rem;
 }
-.session-teacher-row i { color: var(--gold); font-size: 0.85rem; }
-.session-desc {
-  color: var(--text-muted);
-  font-size: 0.88rem;
-  margin-top: 0.6rem;
-  line-height: 1.6;
-}
+.session-teacher-row i { color: var(--gold); font-size: 0.8rem; }
 
 .session-actions {
   display: flex;
-  flex-direction: column;
   gap: 0.5rem;
-  min-width: 140px;
+  align-items: center;
 }
 .session-action-btn {
-  padding: 0.5rem 0.9rem;
+  padding: 0.45rem 0.85rem;
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
   font-size: 0.72rem;
-  letter-spacing: 1px;
-  text-align: center;
+  letter-spacing: 0.5px;
   background: rgba(255,255,255,0.05);
   border: 1px solid var(--card-border);
   color: var(--text-muted);
@@ -786,8 +751,7 @@ a:hover { color: var(--gold-lt); }
   transition: all 0.25s;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 .session-action-btn:hover {
   background: rgba(201,168,76,0.15);
@@ -799,16 +763,16 @@ a:hover { color: var(--gold-lt); }
   background: rgba(201, 168, 76, 0.08);
   border: 1px dashed var(--gold);
   border-radius: var(--radius-sm);
-  padding: 0.9rem 1.2rem;
-  margin-top: 1.8rem;
+  padding: 0.8rem 1.1rem;
+  margin-top: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.7rem;
   font-size: 0.84rem;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.5;
 }
-.footnote-alert i { color: var(--gold); font-size: 1.2rem; flex-shrink: 0; }
+.footnote-alert i { color: var(--gold); font-size: 1.1rem; flex-shrink: 0; }
 
 /* ── SUBJECTS & TEXTS SECTION ── */
 .subjects-section {
@@ -816,63 +780,50 @@ a:hover { color: var(--gold-lt); }
 }
 .subjects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1.3rem;
 }
 .subject-card {
   background: var(--card-surface);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
-  padding: 1.6rem;
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  padding: 1.4rem;
+  transition: transform 0.25s, border-color 0.25s;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 .subject-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: var(--gold);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 .subject-card-number {
   position: absolute;
-  top: 1.2rem; right: 1.2rem;
+  top: 1rem; right: 1.1rem;
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: rgba(201,168,76,0.15);
-}
-.subject-icon-box {
-  width: 48px; height: 48px;
-  border-radius: 10px;
-  background: rgba(201, 168, 76, 0.1);
-  border: 1px solid rgba(201, 168, 76, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  color: rgba(201,168,76,0.18);
 }
 .subject-discipline {
   font-family: var(--font-heading);
-  font-size: 0.72rem;
-  letter-spacing: 2px;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 0.3rem;
 }
 .subject-title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--text);
-  line-height: 1.4;
-  margin-bottom: 0.3rem;
+  line-height: 1.35;
+  margin-bottom: 0.25rem;
 }
 .subject-arabic {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--gold-lt);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.7rem;
   direction: rtl;
 }
 .subject-teacher-badge {
@@ -882,17 +833,12 @@ a:hover { color: var(--gold-lt); }
   font-size: 0.82rem;
   color: var(--text-muted);
   background: rgba(0,0,0,0.25);
-  padding: 0.3rem 0.7rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 6px;
-  margin-bottom: 0.8rem;
-}
-.subject-teacher-badge i { color: var(--gold); font-size: 0.75rem; }
-.subject-desc {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.65;
+  width: fit-content;
   margin-top: auto;
 }
+.subject-teacher-badge i { color: var(--gold); font-size: 0.75rem; }
 
 /* ── FACULTY / SCHOLARS SECTION ── */
 .faculty-section {
@@ -900,49 +846,47 @@ a:hover { color: var(--gold-lt); }
 }
 .faculty-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.4rem;
 }
 .faculty-card {
   background: var(--card-surface);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.25s;
 }
 .faculty-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+  transform: translateY(-3px);
   border-color: rgba(201,168,76,0.4);
 }
 .faculty-card-top {
-  height: 5px;
+  height: 4px;
   background: var(--gold-gradient);
 }
 .faculty-card-body {
-  padding: 1.8rem;
+  padding: 1.5rem 1.2rem;
   text-align: center;
 }
 .faculty-avatar {
-  width: 96px; height: 96px;
+  width: 80px; height: 80px;
   border-radius: 50%;
   border: 2px solid var(--gold);
-  margin: 0 auto 1.2rem;
+  margin: 0 auto 0.9rem;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--bg-secondary);
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--gold);
-  box-shadow: 0 4px 18px rgba(0,0,0,0.3);
 }
 .faculty-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .faculty-name {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: var(--text);
   margin-bottom: 0.2rem;
 }
@@ -952,33 +896,15 @@ a:hover { color: var(--gold-lt); }
   margin-bottom: 0.6rem;
   direction: rtl;
 }
-.faculty-role {
-  font-size: 0.78rem;
-  color: var(--gold-lt);
-  font-family: var(--font-heading);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
 .faculty-subject-tag {
   display: inline-block;
-  padding: 0.3rem 0.8rem;
+  padding: 0.25rem 0.75rem;
   background: rgba(201, 168, 76, 0.08);
   border: 1px solid rgba(201, 168, 76, 0.25);
-  border-radius: 20px;
+  border-radius: 16px;
   font-size: 0.78rem;
-  color: var(--text);
-  margin-bottom: 1rem;
-}
-.bio-list {
-  list-style: disc;
-  text-align: left;
-  padding-left: 1.2rem;
-  font-size: 0.83rem;
   color: var(--text-muted);
-  line-height: 1.65;
 }
-.bio-list li { margin-bottom: 0.4rem; }
 
 /* ── STUDENT STUDY MATERIAL SECTION ── */
 .material-section {
@@ -989,129 +915,104 @@ a:hover { color: var(--gold-lt); }
   background: var(--card-surface);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
-  padding: 2.5rem 2rem;
-  margin-bottom: 2.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
 }
 .material-hero-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 4px;
+  height: 3px;
   background: var(--gold-gradient);
 }
 .material-flex-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 2.2rem;
+  grid-template-columns: 240px 1fr;
+  gap: 1.8rem;
   align-items: center;
 }
-@media(max-width: 850px){
+@media(max-width: 800px){
   .material-flex-layout { grid-template-columns: 1fr; text-align: center; }
 }
 
-/* 3D Book / Folder Visual */
 .material-visual-box {
   background: linear-gradient(145deg, #182c20 0%, #0d1a13 100%);
-  border: 2px solid rgba(201,168,76,0.3);
+  border: 1px solid rgba(201,168,76,0.3);
   border-radius: var(--radius);
-  padding: 2rem 1.5rem;
+  padding: 1.8rem 1.2rem;
   text-align: center;
-  box-shadow: 0 16px 36px rgba(0,0,0,0.5);
-  position: relative;
-}
-.material-pdf-badge {
-  position: absolute;
-  top: 12px; right: 12px;
-  background: #c93b3b;
-  color: #fff;
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  letter-spacing: 1px;
 }
 .material-book-icon {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: var(--gold);
-  margin-bottom: 0.8rem;
-  text-shadow: 0 4px 15px rgba(201,168,76,0.3);
+  margin-bottom: 0.6rem;
 }
 .material-visual-title {
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 0.3rem;
-  letter-spacing: 1px;
+  margin-bottom: 0.2rem;
 }
 .material-visual-sub {
   font-size: 0.75rem;
   color: var(--gold-lt);
 }
 
-.material-details-box { display: flex; flex-direction: column; }
 .material-main-heading {
   font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  font-size: clamp(1.3rem, 2.8vw, 1.65rem);
   color: var(--text);
-  margin-bottom: 0.4rem;
-  line-height: 1.3;
+  margin-bottom: 0.25rem;
 }
 .material-arabic-title {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   color: var(--gold);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   direction: rtl;
 }
 .material-description {
   color: var(--text-muted);
-  font-size: 0.94rem;
-  line-height: 1.8;
-  margin-bottom: 1.8rem;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 1.4rem;
 }
 .material-buttons-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.8rem;
 }
-@media(max-width: 850px){
+@media(max-width: 800px){
   .material-buttons-row { justify-content: center; }
 }
 
 /* Material Mutun Index Grid */
 .material-mutun-title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   letter-spacing: 1px;
   color: var(--gold);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 .material-mutun-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.9rem;
 }
 .mutun-item {
   background: var(--card-surface);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-sm);
-  padding: 1.1rem;
+  padding: 0.9rem 1rem;
   display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-  transition: transform 0.25s, border-color 0.25s;
-}
-.mutun-item:hover {
-  transform: translateY(-2px);
-  border-color: rgba(201,168,76,0.4);
+  align-items: center;
+  gap: 0.75rem;
 }
 .mutun-num {
-  width: 28px; height: 28px;
+  width: 26px; height: 26px;
   border-radius: 50%;
   background: rgba(201, 168, 76, 0.12);
   color: var(--gold);
@@ -1125,13 +1026,8 @@ a:hover { color: var(--gold-lt); }
 }
 .mutun-info h4 {
   font-family: var(--font-heading);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text);
-  margin-bottom: 0.2rem;
-}
-.mutun-info p {
-  font-size: 0.75rem;
-  color: var(--text-muted);
 }
 
 /* Interactive Drive Embed Preview Frame */
@@ -1140,13 +1036,13 @@ a:hover { color: var(--gold-lt); }
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   overflow: hidden;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: none;
 }
-.embed-preview-wrapper.open { display: block; animation: fadeIn 0.4s ease; }
+.embed-preview-wrapper.open { display: block; animation: fadeIn 0.35s ease; }
 .embed-preview-header {
   background: rgba(0,0,0,0.3);
-  padding: 0.8rem 1.4rem;
+  padding: 0.75rem 1.2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1164,12 +1060,11 @@ a:hover { color: var(--gold-lt); }
   color: var(--text-muted);
   font-size: 1rem;
   cursor: pointer;
-  transition: color 0.2s;
 }
 .embed-close-btn:hover { color: var(--gold); }
 .embed-iframe {
   width: 100%;
-  height: 600px;
+  height: 550px;
   border: none;
 }
 
@@ -1180,8 +1075,8 @@ a:hover { color: var(--gold-lt); }
 .reg-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  gap: 1.3rem;
+  margin-bottom: 2.5rem;
 }
 @media(max-width: 850px){
   .reg-card-grid { grid-template-columns: 1fr; }
@@ -1190,144 +1085,138 @@ a:hover { color: var(--gold-lt); }
   background: var(--card-surface);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
-  padding: 2rem 1.6rem;
+  padding: 1.8rem 1.4rem;
   text-align: center;
-  transition: transform 0.3s, border-color 0.3s;
-}
-.reg-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold);
 }
 .reg-card-icon {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--gold);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .reg-card-title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--text);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 .reg-card-fee {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--green-lt);
-  margin: 0.6rem 0;
+  margin: 0.4rem 0;
 }
 .reg-card-desc {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  line-height: 1.55;
+  margin-bottom: 1.2rem;
 }
 
 /* Guidelines Accordion */
 .faq-box {
-  max-width: 840px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .faq-item {
   background: var(--card-surface);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-sm);
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.8rem;
   overflow: hidden;
 }
 .faq-trigger {
   width: 100%;
-  padding: 1.1rem 1.4rem;
+  padding: 1rem 1.2rem;
   background: none;
   border: none;
   color: var(--text);
   font-family: var(--font-heading);
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+  font-size: 0.88rem;
   text-align: left;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.25s;
 }
 body.urdu-mode .faq-trigger { text-align: right; }
 .faq-trigger:hover { color: var(--gold); }
-.faq-trigger i { transition: transform 0.3s; color: var(--gold); font-size: 0.8rem; }
+.faq-trigger i { transition: transform 0.25s; color: var(--gold); font-size: 0.75rem; }
 .faq-item.active .faq-trigger i { transform: rotate(180deg); }
 .faq-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease;
-  padding: 0 1.4rem;
-  font-size: 0.88rem;
+  transition: max-height 0.3s ease;
+  padding: 0 1.2rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 .faq-item.active .faq-content {
-  padding: 0 1.4rem 1.2rem;
-  max-height: 250px;
+  padding: 0 1.2rem 1.1rem;
+  max-height: 200px;
 }
 
 /* ── FOOTER ── */
 .footer {
   background: var(--bg-secondary);
   border-top: 1px solid var(--card-border);
-  padding: 4rem 1.5rem 2.5rem;
+  padding: 3.5rem 1.5rem 2rem;
 }
 .footer-hadith {
-  max-width: 680px;
-  margin: 0 auto 2.5rem;
+  max-width: 640px;
+  margin: 0 auto 2rem;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.3rem;
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   background: rgba(201, 168, 76, 0.03);
 }
 .footer-hadith .arabic {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   color: var(--gold);
-  line-height: 1.6;
-  margin-bottom: 0.6rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
 .footer-hadith .en {
   font-style: italic;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 .footer-hadith .source {
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   color: var(--text-muted);
-  margin-top: 0.4rem;
+  margin-top: 0.35rem;
 }
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.8rem;
+  gap: 1.6rem;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 .footer-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
+  gap: 0.45rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
-  transition: color 0.3s;
+  transition: color 0.25s;
 }
 .footer-link:hover { color: var(--gold); }
 .footer-copy {
   text-align: center;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-dim);
   border-top: 1px solid rgba(255,255,255,0.05);
-  padding-top: 1.5rem;
+  padding-top: 1.3rem;
 }
 
 /* ── ANIMATIONS ── */
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-.fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in-section.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
@@ -1341,10 +1230,10 @@ body.urdu-mode .faq-trigger { text-align: right; }
   </div>
   <ul class="nav-links">
     <li><a href="#overview" data-en="Overview" data-ur="جائزہ">Overview</a></li>
-    <li><a href="#timetable" data-en="Timetable" data-ur="اوقات کار">Timetable</a></li>
+    <li><a href="#timetable" data-en="Schedule" data-ur="شیڈول">Schedule</a></li>
     <li><a href="#subjects" data-en="Subjects" data-ur="مضامین">Subjects</a></li>
-    <li><a href="#faculty" data-en="Mashayikh" data-ur="مشائخ">Mashayikh</a></li>
-    <li><a href="#study-material" data-en="Study Material" data-ur="مطالعاتی مواد">Study Material</a></li>
+    <li><a href="#faculty" data-en="Teachers" data-ur="اساتذہ">Teachers</a></li>
+    <li><a href="#study-material" data-en="Study Material" data-ur="درسی مواد">Study Material</a></li>
     <li><a href="#registration" data-en="Register" data-ur="اندراج">Register</a></li>
     <li><a href="index.html" class="nav-cta-btn" data-en="Level 2 Course" data-ur="لیول 2 کورس"><i class="fas fa-graduation-cap"></i> Level 2 Course</a></li>
     <li>
@@ -1362,13 +1251,13 @@ body.urdu-mode .faq-trigger { text-align: right; }
 <div class="drawer-overlay" id="drawerOverlay"></div>
 <div class="mobile-drawer" id="mobileDrawer">
   <a href="#overview" data-en="Overview" data-ur="جائزہ">Overview</a>
-  <a href="#timetable" data-en="Timetable" data-ur="اوقات کار">Timetable</a>
+  <a href="#timetable" data-en="Schedule" data-ur="شیڈول">Schedule</a>
   <a href="#subjects" data-en="Subjects" data-ur="مضامین">Subjects</a>
-  <a href="#faculty" data-en="Mashayikh" data-ur="مشائخ">Mashayikh</a>
-  <a href="#study-material" data-en="Study Material" data-ur="مطالعاتی مواد">Study Material</a>
+  <a href="#faculty" data-en="Teachers" data-ur="اساتذہ">Teachers</a>
+  <a href="#study-material" data-en="Study Material" data-ur="درسی مواد">Study Material</a>
   <a href="#registration" data-en="Register" data-ur="اندراج">Register</a>
-  <a href="index.html" style="color:var(--gold)" data-en="Go to Level 2 Course" data-ur="لیول 2 کورس پر جائیں"><i class="fas fa-graduation-cap"></i> Level 2 Course</a>
-  <button class="lang-toggle" id="langToggleMobile" aria-label="Toggle Urdu/English" style="margin-top:1rem">
+  <a href="index.html" style="color:var(--gold)" data-en="Level 2 Course" data-ur="لیول 2 کورس"><i class="fas fa-graduation-cap"></i> Level 2 Course</a>
+  <button class="lang-toggle" id="langToggleMobile" aria-label="Toggle Urdu/English" style="margin-top:0.8rem">
     <i class="fas fa-globe"></i><span class="lang-text">اردو</span>
   </button>
 </div>
@@ -1383,26 +1272,26 @@ body.urdu-mode .faq-trigger { text-align: right; }
     <div class="bismillah-calligraphy">بسم الله الرحمن الرحيم</div>
     <div class="hero-arabic-title">الدورة العلمية الأولى</div>
     <h1 class="hero-en-title">THE FIRST DAWRAH ‘ILMIYYAH</h1>
-    <div class="dawrah-tagline" data-en="Ṭālib al-‘Ilm Project · Intensive Academic Week" data-ur="مشروع طالب العلم · علمی و تدریسی دورہ">Ṭālib al-‘Ilm Project · Intensive Academic Week</div>
+    <div class="dawrah-tagline" data-en="Ṭālib al-‘Ilm Project · Online" data-ur="مشروع طالب العلم · آن لائن">Ṭālib al-‘Ilm Project · Online</div>
 
     <div class="hero-dates-pill">
       <i class="fas fa-calendar-alt"></i>
-      <span data-en="7–9 November 2026" data-ur="7 تا 9 نومبر 2026">7–9 November 2026</span>
+      <span data-en="7-9 November 2026" data-ur="7 تا 9 نومبر 2026">7-9 November 2026</span>
     </div>
 
-    <p class="hero-desc" data-en="An intensive three-day scholastic gathering covering essential classical treatises in Fiqh, ‘Aqīdah, Tafsīr, and Ḥadīth — instructed by esteemed scholars of the Sunnah with comprehensive student study material." data-ur="تین روزہ علمی دورہ جس میں فقہ، عقیدہ، تفسیر اور حدیث کے بنیادی کلاسیکی متون کا مطالعہ کیا جائے گا — اہل سنت کے معتبر مشائخ کے زیرِ درس، مع جامع مطالعاتی کتابچہ۔">
-      An intensive three-day scholastic gathering covering essential classical treatises in Fiqh, ‘Aqīdah, Tafsīr, and Ḥadīth — instructed by esteemed scholars of the Sunnah with comprehensive student study material.
+    <p class="hero-desc" data-en="A 3-day online intensive covering core classical texts in Hadith, Aqeedah, Fiqh, and Tafsir with scholars of the Sunnah." data-ur="تین روزہ آن لائن علمی دورہ: حدیث، عقیدہ، فقہ اور تفسیر کے بنیادی متون کا مشائخ کے ساتھ تفصیلی مطالعہ۔">
+      A 3-day online intensive covering core classical texts in Hadith, Aqeedah, Fiqh, and Tafsir with scholars of the Sunnah.
     </p>
 
     <div class="hero-buttons">
-      <a href="#timetable" class="btn btn-primary" data-en="View Timetable" data-ur="اوقات کار دیکھیں"><i class="fas fa-calendar-check"></i> View Timetable</a>
-      <a href="https://drive.google.com/file/d/1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline" data-en="Study Material (PDF)" data-ur="مطالعاتی مواد (پی ڈی ایف)"><i class="fas fa-file-pdf"></i> Study Material (PDF)</a>
-      <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20would%20like%20to%20register%20for%20the%20First%20Dawrah%20Ilmiyyah%20(7-9%20Nov%202026)" target="_blank" rel="noopener" class="btn btn-green" data-en="Register Free on WhatsApp" data-ur="واٹس ایپ پر مفت رجسٹریشن"><i class="fab fa-whatsapp"></i> Register Free</a>
+      <a href="#timetable" class="btn btn-primary" data-en="Schedule" data-ur="شیڈول دیکھیں"><i class="fas fa-calendar-check"></i> Schedule</a>
+      <a href="https://drive.google.com/file/d/1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline" data-en="Study Material (PDF)" data-ur="درسی مواد (پی ڈی ایف)"><i class="fas fa-file-pdf"></i> Study Material (PDF)</a>
+      <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20would%20like%20to%20register%20for%20the%20First%20Dawrah%20Ilmiyyah%20(7-9%20Nov%202026)" target="_blank" rel="noopener" class="btn btn-green" data-en="Register Free" data-ur="مفت رجسٹریشن"><i class="fab fa-whatsapp"></i> Register Free</a>
     </div>
 
     <!-- Countdown Timer -->
     <div class="countdown-box">
-      <div class="countdown-title" data-en="Dawrah Kickoff Countdown" data-ur="دورہ کے آغاز کا کاؤنٹ ڈاؤن">Dawrah Kickoff Countdown</div>
+      <div class="countdown-title" data-en="Starting In" data-ur="آغاز میں باقی وقت">Starting In</div>
       <div class="countdown-grid">
         <div class="countdown-item">
           <span class="countdown-num" id="cdDays">00</span>
@@ -1432,22 +1321,22 @@ body.urdu-mode .faq-trigger { text-align: right; }
     <div class="stat-item">
       <div class="stat-icon"><i class="fas fa-calendar-day"></i></div>
       <div class="stat-number">3 Days</div>
-      <div class="stat-title" data-en="7–9 Nov 2026" data-ur="7 تا 9 نومبر 2026">7–9 Nov 2026</div>
+      <div class="stat-title" data-en="7-9 Nov 2026" data-ur="7 تا 9 نومبر 2026">7-9 Nov 2026</div>
     </div>
     <div class="stat-item">
       <div class="stat-icon"><i class="fas fa-book-bookmark"></i></div>
-      <div class="stat-number">7 Subjects</div>
+      <div class="stat-number">7 Texts</div>
       <div class="stat-title" data-en="Classical Mutūn" data-ur="کلاسیکی متون">Classical Mutūn</div>
     </div>
     <div class="stat-item">
       <div class="stat-icon"><i class="fas fa-chalkboard-user"></i></div>
-      <div class="stat-number">6 Scholars</div>
-      <div class="stat-title" data-en="Mashāyikh &amp; Asātidhah" data-ur="مشائخ و اساتذہ">Mashāyikh &amp; Asātidhah</div>
+      <div class="stat-number">6 Teachers</div>
+      <div class="stat-title" data-en="Scholars" data-ur="اساتذہ کرام">Scholars</div>
     </div>
     <div class="stat-item">
       <div class="stat-icon"><i class="fas fa-file-pdf"></i></div>
-      <div class="stat-number">Coursepack</div>
-      <div class="stat-title" data-en="Study Material PDF" data-ur="مطالعاتی کتابچہ">Study Material PDF</div>
+      <div class="stat-number">PDF</div>
+      <div class="stat-title" data-en="Study Material" data-ur="درسی کتابچہ">Study Material</div>
     </div>
   </div>
 </section>
@@ -1456,24 +1345,24 @@ body.urdu-mode .faq-trigger { text-align: right; }
 <section class="timetable-section section-padding" id="timetable">
   <div class="container fade-in-section">
     <div class="text-center">
-      <div class="section-label" data-en="Scholastic Schedule" data-ur="جدول الأوقات">Scholastic Schedule</div>
-      <h2 class="section-heading" data-en="Dawrah Timetable &amp; Sessions" data-ur="دورہ کے تفصیلی اوقات اور سیشنز">Dawrah Timetable &amp; Sessions</h2>
-      <p class="section-subtitle" data-en="Carefully arranged across three days with multi-timezone synchronization for India, Pakistan, and Saudi Arabia." data-ur="تین ایام پر مشتمل منظم نظام الاوقات، انڈیا، پاکستان اور سعودی عرب کے لیے بیک وقت دستیاب۔">
-        Carefully arranged across three days with multi-timezone synchronization for India, Pakistan, and Saudi Arabia.
+      <div class="section-label" data-en="Schedule" data-ur="اوقات کار">Schedule</div>
+      <h2 class="section-heading" data-en="Dawrah Timetable" data-ur="دورہ کے تفصیلی اوقات">Dawrah Timetable</h2>
+      <p class="section-subtitle" data-en="Live sessions across India, Pakistan, and Saudi Arabia time zones." data-ur="انڈیا، پاکستان اور سعودی عرب کے اوقات کے مطابق۔">
+        Live sessions across India, Pakistan, and Saudi Arabia time zones.
       </p>
     </div>
 
     <!-- Timezone Switcher -->
     <div class="timezone-controller">
       <div class="timezone-label">
-        <i class="fas fa-earth-americas"></i>
-        <span data-en="Highlight Your Timezone:" data-ur="اپنا ٹائم زون منتخب کریں:">Highlight Your Timezone:</span>
+        <i class="fas fa-clock"></i>
+        <span data-en="Select Timezone:" data-ur="ٹائم زون منتخب کریں:">Select Timezone:</span>
       </div>
       <div class="tz-buttons">
-        <button class="tz-btn active" data-tz="IST"><i class="fas fa-location-dot"></i> IST · India (UTC+5:30)</button>
-        <button class="tz-btn" data-tz="PKT"><i class="fas fa-location-dot"></i> PKT · Pakistan (UTC+5:00)</button>
-        <button class="tz-btn" data-tz="KSA"><i class="fas fa-location-dot"></i> KSA · Saudi Arabia (UTC+3:00)</button>
-        <button class="tz-btn" data-tz="ALL"><i class="fas fa-layer-group"></i> Show All Times</button>
+        <button class="tz-btn active" data-tz="IST"><i class="fas fa-location-dot"></i> IST (India)</button>
+        <button class="tz-btn" data-tz="PKT"><i class="fas fa-location-dot"></i> PKT (Pakistan)</button>
+        <button class="tz-btn" data-tz="KSA"><i class="fas fa-location-dot"></i> KSA (Saudi)</button>
+        <button class="tz-btn" data-tz="ALL"><i class="fas fa-layer-group"></i> All Times</button>
       </div>
     </div>
 
@@ -1481,19 +1370,19 @@ body.urdu-mode .faq-trigger { text-align: right; }
     <div class="day-tabs">
       <button class="day-tab-btn active" onclick="switchDay('day1', this)">
         <span class="day-title" data-en="Day 1" data-ur="پہلا دن">Day 1</span>
-        <span class="day-sub" data-en="Saturday · 7 Nov 2026" data-ur="ہفتہ · 7 نومبر 2026">Saturday · 7 Nov 2026</span>
+        <span class="day-sub" data-en="Saturday, 7 Nov 2026" data-ur="ہفتہ، 7 نومبر 2026">Saturday, 7 Nov 2026</span>
       </button>
       <button class="day-tab-btn" onclick="switchDay('day2', this)">
         <span class="day-title" data-en="Day 2" data-ur="دوسرا دن">Day 2</span>
-        <span class="day-sub" data-en="Sunday · 8 Nov 2026" data-ur="اتوار · 8 نومبر 2026">Sunday · 8 Nov 2026</span>
+        <span class="day-sub" data-en="Sunday, 8 Nov 2026" data-ur="اتوار، 8 نومبر 2026">Sunday, 8 Nov 2026</span>
       </button>
       <button class="day-tab-btn" onclick="switchDay('day3', this)">
         <span class="day-title" data-en="Day 3" data-ur="تیسرا دن">Day 3</span>
-        <span class="day-sub" data-en="Monday · 9 Nov 2026" data-ur="پیر · 9 نومبر 2026">Monday · 9 Nov 2026</span>
+        <span class="day-sub" data-en="Monday, 9 Nov 2026" data-ur="پیر، 9 نومبر 2026">Monday, 9 Nov 2026</span>
       </button>
       <button class="day-tab-btn" onclick="switchDay('all', this)">
-        <span class="day-title" data-en="Full Schedule" data-ur="مکمل شیڈول">Full Schedule</span>
-        <span class="day-sub" data-en="All 3 Days" data-ur="تینوں دن">All 3 Days</span>
+        <span class="day-title" data-en="All Days" data-ur="تمام ایام">All Days</span>
+        <span class="day-sub" data-en="Full Schedule" data-ur="مکمل شیڈول">Full Schedule</span>
       </button>
     </div>
 
@@ -1501,18 +1390,16 @@ body.urdu-mode .faq-trigger { text-align: right; }
     <div class="day-panel active" id="day1">
       <div class="day-header-card">
         <div class="day-header-title">
-          <i class="fas fa-calendar-day" style="color:var(--gold);margin-right:0.5rem"></i>
-          <span data-en="Day 1 — Saturday, 7 November 2026" data-ur="پہلا دن — ہفتہ، 7 نومبر 2026">Day 1 — Saturday, 7 November 2026</span>
+          <i class="fas fa-calendar-day" style="color:var(--gold);margin-right:0.4rem"></i>
+          <span data-en="Saturday, 7 November 2026" data-ur="ہفتہ، 7 نومبر 2026">Saturday, 7 November 2026</span>
         </div>
-        <div class="day-header-date" data-en="Opening Day &amp; Foundations" data-ur="افتتاحی دن اور بنیادی مباحث">Opening Day &amp; Foundations</div>
       </div>
 
-      <!-- Session 1: Opening Session -->
+      <!-- Day 1 Session 1 -->
       <div class="session-card">
         <div class="session-top">
           <div class="session-tag-group">
-            <span class="session-badge"><i class="fas fa-door-open"></i> <span data-en="Opening Session" data-ur="افتتاحی سیشن">Opening Session</span></span>
-            <span class="session-badge"><i class="fas fa-scroll"></i> Ḥadīth &amp; Niyyah</span>
+            <span class="session-badge" data-en="Opening Session" data-ur="افتتاحی سیشن">Opening Session</span>
           </div>
           <div class="session-times-bar">
             <span class="time-pill" data-for="IST">IST: <strong>8:50 pm</strong></span>
@@ -1522,29 +1409,24 @@ body.urdu-mode .faq-trigger { text-align: right; }
         </div>
         <div class="session-body">
           <div>
-            <h3 class="session-subject" data-en="The Importance of Ikhlāṣ — Ḥadīth “Innamā al-A‘māl bin-Niyyāt”" data-ur="اخلاص کی اہمیت — حدیث «انما الاعمال بالنیات»">The Importance of Ikhlāṣ — Ḥadīth “Innamā al-A‘māl bin-Niyyāt”</h3>
+            <h3 class="session-subject" data-en="The Importance of Ikhlāṣ: Ḥadīth “Innamā al-A‘māl bin-Niyyāt”" data-ur="اخلاص کی اہمیت: حدیث «انما الاعمال بالنیات»">The Importance of Ikhlāṣ: Ḥadīth “Innamā al-A‘māl bin-Niyyāt”</h3>
             <div class="session-subject-arabic">أهمية الإخلاص: حديث «إنما الأعمال بالنيات»</div>
             <div class="session-teacher-row">
-              <i class="fas fa-user-tie"></i>
-              <strong data-en="Shaykh Zafar Alam bin Ziya ur-Rahman al-Athari" data-ur="شیخ ظفر عالم بن ضیاء الرحمن الاثری">Shaykh Zafar Alam bin Ziya ur-Rahman al-Athari</strong>
+              <i class="fas fa-user"></i>
+              <span data-en="Shaykh Zafar Alam bin Ziya ur-Rahman al-Athari" data-ur="شیخ ظفر عالم بن ضیاء الرحمن الاثری">Shaykh Zafar Alam bin Ziya ur-Rahman al-Athari</span>
             </div>
-            <p class="session-desc" data-en="Inauguration of the Dawrah: Sincerity of purpose in seeking sacred knowledge, profound legal and theological implications of the premier hadith of intention from Amir al-Mu'minin 'Umar ibn al-Khattab radiyallahu 'anhu." data-ur="دورہ کا باقاعدہ افتتاح: حصولِ علم میں خلوصِ نیت کی اہمیت، اور امیر المؤمنین عمر بن الخطاب رضی اللہ عنہ کی روایت کردہ حدیثِ نیت کی علمی اور فقہی تشریح۔">
-              Inauguration of the Dawrah: Sincerity of purpose in seeking sacred knowledge, profound legal and theological implications of the premier hadith of intention from Amir al-Mu'minin 'Umar ibn al-Khattab radiyallahu 'anhu.
-            </p>
           </div>
           <div class="session-actions">
-            <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20want%20information%20for%20Opening%20Session%20(7%20Nov)" target="_blank" class="session-action-btn"><i class="fab fa-whatsapp"></i> Join Link</a>
             <button class="session-action-btn" onclick="copySessionInfo('Day 1 Opening Session: The Importance of Ikhlas - 8:50 PM IST / 8:20 PM PKT / 6:20 PM KSA')"><i class="fas fa-copy"></i> Copy Time</button>
           </div>
         </div>
       </div>
 
-      <!-- Session 2: Second Session -->
+      <!-- Day 1 Session 2 -->
       <div class="session-card">
         <div class="session-top">
           <div class="session-tag-group">
-            <span class="session-badge"><i class="fas fa-book"></i> <span data-en="Second Session" data-ur="دوسرا سیشن">Second Session</span></span>
-            <span class="session-badge"><i class="fas fa-shield-halved"></i> ‘Aqīdah &amp; Tawḥīd</span>
+            <span class="session-badge" data-en="Second Session" data-ur="دوسرا سیشن">Second Session</span>
           </div>
           <div class="session-times-bar">
             <span class="time-pill" data-for="IST">IST: <strong>9:35 pm</strong></span>
@@ -1554,18 +1436,14 @@ body.urdu-mode .faq-trigger { text-align: right; }
         </div>
         <div class="session-body">
           <div>
-            <h3 class="session-subject" data-en="Kashf ash-Shubuhāt (Removing Doubts in Tawheed)" data-ur="کشف الشبہات (توحید کے شبہات کا ازالہ)">Kashf ash-Shubuhāt (Removing Doubts in Tawheed)</h3>
-            <div class="session-subject-arabic">كشف الشبهات — للإمام محمد بن عبد الوهاب رحمه الله</div>
+            <h3 class="session-subject" data-en="Kashf ash-Shubuhāt" data-ur="کشف الشبہات">Kashf ash-Shubuhāt</h3>
+            <div class="session-subject-arabic">كشف الشبهات</div>
             <div class="session-teacher-row">
-              <i class="fas fa-user-tie"></i>
-              <strong data-en="Ustadh Muhammad Abu Bakr bin Yasir al-Lahori" data-ur="استاذ محمد ابو بکر بن یاسر اللاهوری">Ustadh Muhammad Abu Bakr bin Yasir al-Lahori</strong>
+              <i class="fas fa-user"></i>
+              <span data-en="Ustadh Muhammad Abu Bakr bin Yasir al-Lahori" data-ur="استاذ محمد ابو بکر بن یاسر اللاهوری">Ustadh Muhammad Abu Bakr bin Yasir al-Lahori</span>
             </div>
-            <p class="session-desc" data-en="A detailed study of the masterwork of Shaykh al-Islam Muhammad ibn Abd al-Wahhab, methodically dismantling misconceptions regarding Tawhid al-Ibadah and clarifying the arguments of the polytheists." data-ur="شیخ الاسلام محمد بن عبدالوہاب رحمہ اللہ کے مشہور رسالے کا مطالعہ، جس میں توحید عبادت کے متعلق پیدا ہونے والے تمام شکوک و شبہات کا مسکت اور قرآنی دلائل سے ازالہ کیا گیا ہے۔">
-              A detailed study of the masterwork of Shaykh al-Islam Muhammad ibn Abd al-Wahhab, methodically dismantling misconceptions regarding Tawhid al-Ibadah and clarifying the arguments of the polytheists.
-            </p>
           </div>
           <div class="session-actions">
-            <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20want%20information%20for%20Kashf%20ash-Shubuhat%20Session%20(7%20Nov)" target="_blank" class="session-action-btn"><i class="fab fa-whatsapp"></i> Join Link</a>
             <button class="session-action-btn" onclick="copySessionInfo('Day 1 Session 2: Kashf ash-Shubuhat - 9:35 PM IST / 9:05 PM PKT / 7:05 PM KSA')"><i class="fas fa-copy"></i> Copy Time</button>
           </div>
         </div>
@@ -1576,18 +1454,16 @@ body.urdu-mode .faq-trigger { text-align: right; }
     <div class="day-panel" id="day2">
       <div class="day-header-card">
         <div class="day-header-title">
-          <i class="fas fa-calendar-day" style="color:var(--gold);margin-right:0.5rem"></i>
-          <span data-en="Day 2 — Sunday, 8 November 2026" data-ur="دوسرا دن — اتوار، 8 نومبر 2026">Day 2 — Sunday, 8 November 2026</span>
+          <i class="fas fa-calendar-day" style="color:var(--gold);margin-right:0.4rem"></i>
+          <span data-en="Sunday, 8 November 2026" data-ur="اتوار، 8 نومبر 2026">Sunday, 8 November 2026</span>
         </div>
-        <div class="day-header-date" data-en="Fiqh, Taharah &amp; Sacred Isnad" data-ur="فقہ، طہارت اور اسانیدِ حدیث">Fiqh, Taharah &amp; Sacred Isnad</div>
       </div>
 
-      <!-- Day 2 Session 1: Shurut as-Salah -->
+      <!-- Day 2 Session 1 -->
       <div class="session-card">
         <div class="session-top">
           <div class="session-tag-group">
-            <span class="session-badge"><i class="fas fa-hands-praying"></i> <span data-en="First Session" data-ur="پہلا سیشن">First Session</span></span>
-            <span class="session-badge"><i class="fas fa-mosque"></i> Fiqh aṣ-Ṣalāh</span>
+            <span class="session-badge" data-en="First Session" data-ur="پہلا سیشن">First Session</span>
           </div>
           <div class="session-times-bar">
             <span class="time-pill" data-for="IST">IST: <strong>4:00 pm</strong></span>
@@ -1597,29 +1473,24 @@ body.urdu-mode .faq-trigger { text-align: right; }
         </div>
         <div class="session-body">
           <div>
-            <h3 class="session-subject" data-en="Shurūṭ aṣ-Ṣalāh wa Arkānuhā wa Wājibātuhā" data-ur="شروط الصلاۃ و ارکانھا و واجباتھا">Shurūṭ aṣ-Ṣalāh wa Arkānuhā wa Wājibātuhā</h3>
+            <h3 class="session-subject" data-en="Shurūṭ aṣ-Ṣalāh wa Arkānuhā wa Wājibātuhā" data-ur="شروط الصلاة وأركانها وواجباتها">Shurūṭ aṣ-Ṣalāh wa Arkānuhā wa Wājibātuhā</h3>
             <div class="session-subject-arabic">شروط الصلاة وأركانها وواجباتها</div>
             <div class="session-teacher-row">
-              <i class="fas fa-user-tie"></i>
-              <strong data-en="Shaykh Muhammad Aakif al-Makki" data-ur="شیخ محمد عاکف المکی">Shaykh Muhammad Aakif al-Makki</strong>
+              <i class="fas fa-user"></i>
+              <span data-en="Shaykh Akif Hikmat al-Makki" data-ur="شیخ عاکف حکمت المکی">Shaykh Akif Hikmat al-Makki</span>
             </div>
-            <p class="session-desc" data-en="Essential jurisprudence of the prayer: prerequisites that must precede it, internal pillars without which prayer is invalid, obligatory elements, and the prostrations of forgetfulness according to the authentic Sunnah." data-ur="نماز کی شرائط، بنیادی ارکان جن کے بغیر نماز باطل ہو جاتی ہے، اس کے واجبات اور سنت نبوی کے مطابق سجدہ سہو کے احکام کا مستند جائزہ۔">
-              Essential jurisprudence of the prayer: prerequisites that must precede it, internal pillars without which prayer is invalid, obligatory elements, and the prostrations of forgetfulness according to the authentic Sunnah.
-            </p>
           </div>
           <div class="session-actions">
-            <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20want%20link%20for%20Shurut%20as-Salah%20Session%20(8%20Nov)" target="_blank" class="session-action-btn"><i class="fab fa-whatsapp"></i> Join Link</a>
             <button class="session-action-btn" onclick="copySessionInfo('Day 2 Session 1: Shurut as-Salah - 4:00 PM IST / 3:30 PM PKT / 1:30 PM KSA')"><i class="fas fa-copy"></i> Copy Time</button>
           </div>
         </div>
       </div>
 
-      <!-- Day 2 Session 2: Sisters Only -->
+      <!-- Day 2 Session 2 (Sisters only) -->
       <div class="session-card sisters-session">
         <div class="session-top">
           <div class="session-tag-group">
-            <span class="session-badge sisters"><i class="fas fa-venus"></i> <span data-en="Second Session (Sisters Only)" data-ur="دوسرا سیشن (خاص برائے خواتین)">Second Session (Sisters Only)</span></span>
-            <span class="session-badge sisters"><i class="fas fa-droplet"></i> Fiqh aṭ-Ṭahārah</span>
+            <span class="session-badge sisters" data-en="Second Session (Sisters Only)" data-ur="دوسرا سیشن (خواتین کے لیے مخصوص)">Second Session (Sisters Only)</span>
           </div>
           <div class="session-times-bar">
             <span class="time-pill" data-for="IST">IST: <strong>5:30 pm</strong></span>
@@ -1629,29 +1500,24 @@ body.urdu-mode .faq-trigger { text-align: right; }
         </div>
         <div class="session-body">
           <div>
-            <h3 class="session-subject" data-en="Bāb al-Ḥayḍ from ad-Durar al-Bahiyyah (Sisters Only)" data-ur="باب الحیض از الدرر البہیۃ (خصوصی سیشن برائے خواتین)">Bāb al-Ḥayḍ from ad-Durar al-Bahiyyah (Sisters Only)</h3>
-            <div class="session-subject-arabic">باب الحيض من كتاب «الدرر البهية» للإمام الشوكاني</div>
+            <h3 class="session-subject" data-en="Bāb al-Ḥayḍ from ad-Durar al-Bahiyyah" data-ur="باب الحيض از الدرر البهیۃ">Bāb al-Ḥayḍ from ad-Durar al-Bahiyyah</h3>
+            <div class="session-subject-arabic">باب الحيض من الدرر البهية</div>
             <div class="session-teacher-row" style="color:var(--sister-pink)">
               <i class="fas fa-user"></i>
-              <strong data-en="Ustadhah Bint Raees Ahmad al-Khadeejiyyah al-Athariyyah" data-ur="استاذہ بنت رئیس احمد الخدیجیہ الاثریہ">Ustadhah Bint Raees Ahmad al-Khadeejiyyah al-Athariyyah</strong>
+              <span data-en="Ustadhah Bint Raees Ahmad al-Khadeejiyyah al-Athariyyah" data-ur="استاذہ بنت رئیس احمد الخدیجیہ الاثریہ">Ustadhah Bint Raees Ahmad al-Khadeejiyyah al-Athariyyah</span>
             </div>
-            <p class="session-desc" data-en="An exclusive and confidential session for sisters covering the detailed rulings of menstruation, irregular bleeding (Istihādah), and postnatal bleeding (Nifās) based on Imam ash-Shawkani’s acclaimed treatise ad-Durar al-Bahiyyah." data-ur="خواتین کے لیے مخصوص نشست جس میں امام شوکانی کی کتاب الدرر البہیۃ سے حیض، استحاضہ اور نفاس کے دقیق فقہی مسائل اور احکام کی وضاحت کی جائے گی۔">
-              An exclusive and confidential session for sisters covering the detailed rulings of menstruation, irregular bleeding (Istihādah), and postnatal bleeding (Nifās) based on Imam ash-Shawkani’s acclaimed treatise ad-Durar al-Bahiyyah.
-            </p>
           </div>
           <div class="session-actions">
-            <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20am%20a%20sister%20and%20want%20to%20register%20for%20Bab%20al-Hayd%20session" target="_blank" class="session-action-btn" style="border-color:var(--sister-pink);color:var(--sister-pink)"><i class="fas fa-lock"></i> Sisters Link</a>
-            <button class="session-action-btn" onclick="copySessionInfo('Day 2 Session 2 (Sisters Only): Bab al-Hayd - 5:30 PM IST / 5:00 PM PKT / 3:00 PM KSA')"><i class="fas fa-copy"></i> Copy Time</button>
+            <button class="session-action-btn" onclick="copySessionInfo('Day 2 Session 2 (Sisters): Bab al-Hayd - 5:30 PM IST / 5:00 PM PKT / 3:00 PM KSA')"><i class="fas fa-copy"></i> Copy Time</button>
           </div>
         </div>
       </div>
 
-      <!-- Day 2 Session 3: Hadith & Qasidah -->
+      <!-- Day 2 Session 3 -->
       <div class="session-card">
         <div class="session-top">
           <div class="session-tag-group">
-            <span class="session-badge"><i class="fas fa-certificate"></i> <span data-en="Third Session" data-ur="تیسرا سیشن">Third Session</span></span>
-            <span class="session-badge"><i class="fas fa-feather"></i> Ḥadīth Transmission &amp; Poetry</span>
+            <span class="session-badge" data-en="Third Session" data-ur="تیسرا سیشن">Third Session</span>
           </div>
           <div class="session-times-bar">
             <span class="time-pill" data-for="IST">IST: <strong>9:30 pm</strong></span>
@@ -1662,17 +1528,13 @@ body.urdu-mode .faq-trigger { text-align: right; }
         <div class="session-body">
           <div>
             <h3 class="session-subject" data-en="Al-Ḥadīth al-Musalsal bil-Awwaliyyah &amp; al-Qaṣīdah al-Waḍḍāḥiyyah" data-ur="الحدیث المسلسل بالاولیہ اور القصیدۃ الوضاحیہ">Al-Ḥadīth al-Musalsal bil-Awwaliyyah &amp; al-Qaṣīdah al-Waḍḍāḥiyyah</h3>
-            <div class="session-subject-arabic">الحديث المسلسل بالأولية والقصيدة الوضاحية في مدح أم المؤمنين عائشة</div>
+            <div class="session-subject-arabic">الحديث المسلسل بالأولية والقصيدة الوضاحية</div>
             <div class="session-teacher-row">
-              <i class="fas fa-user-tie"></i>
-              <strong data-en="Abu Mu‘awiyah Muhammad Qurayshi al-Athari" data-ur="ابو معاویہ محمد قریشی الاثری">Abu Mu‘awiyah Muhammad Qurayshi al-Athari</strong>
+              <i class="fas fa-user"></i>
+              <span data-en="Abu Mu‘awiyah Muhammad Qurayshi al-Athari" data-ur="ابو معاویہ محمد قریشی الاثری">Abu Mu‘awiyah Muhammad Qurayshi al-Athari</span>
             </div>
-            <p class="session-desc" data-en="Oral transmission with chain of narration (Sanad) of the Hadith of Mercy: «الرَّاحِمُونَ يَرْحَمُهُمُ الرَّحْمَنُ», followed by the study, recitation, and legal defense in al-Qasidah al-Waddahiyyah honoring Umm al-Mu’minin ‘A’ishah radiyallahu ‘anha." data-ur="حدیثِ رحمت «الراحمون یرحمہم الرحمن» کی متصل سند کے ساتھ روایت اور اجازت، نیز ام المؤمنین عائشہ صدیقہ رضی اللہ عنہا کی براءت و فضیلت پر مشتمل شاہکار منظوم کلام القصیدۃ الوضاحیہ کا درس۔">
-              Oral transmission with chain of narration (Sanad) of the Hadith of Mercy: «الرَّاحِمُونَ يَرْحَمُهُمُ الرَّحْمَنُ», followed by the study, recitation, and legal defense in al-Qasidah al-Waddahiyyah honoring Umm al-Mu’minin ‘A’ishah radiyallahu ‘anha.
-            </p>
           </div>
           <div class="session-actions">
-            <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20want%20link%20for%20Hadith%20Musalsal%20session" target="_blank" class="session-action-btn"><i class="fab fa-whatsapp"></i> Join Link</a>
             <button class="session-action-btn" onclick="copySessionInfo('Day 2 Session 3: Hadith Musalsal & al-Qasidah al-Waddahiyyah - 9:30 PM IST / 9:00 PM PKT / 7:00 PM KSA')"><i class="fas fa-copy"></i> Copy Time</button>
           </div>
         </div>
@@ -1683,18 +1545,16 @@ body.urdu-mode .faq-trigger { text-align: right; }
     <div class="day-panel" id="day3">
       <div class="day-header-card">
         <div class="day-header-title">
-          <i class="fas fa-calendar-day" style="color:var(--gold);margin-right:0.5rem"></i>
-          <span data-en="Day 3 — Monday, 9 November 2026" data-ur="تیسرا دن — پیر، 9 نومبر 2026">Day 3 — Monday, 9 November 2026</span>
+          <i class="fas fa-calendar-day" style="color:var(--gold);margin-right:0.4rem"></i>
+          <span data-en="Monday, 9 November 2026" data-ur="پیر، 9 نومبر 2026">Monday, 9 November 2026</span>
         </div>
-        <div class="day-header-date" data-en="Quranic Tafsir &amp; Grand Closing Assembly" data-ur="تفسیر قرآن اور اختتامی نشست">Quranic Tafsir &amp; Grand Closing Assembly</div>
       </div>
 
-      <!-- Day 3 Session 1: Tafsir -->
+      <!-- Day 3 Session 1 -->
       <div class="session-card">
         <div class="session-top">
           <div class="session-tag-group">
-            <span class="session-badge"><i class="fas fa-book-quran"></i> <span data-en="First Session" data-ur="پہلا سیشن">First Session</span></span>
-            <span class="session-badge"><i class="fas fa-sun"></i> Tafsīr al-Qur’ān</span>
+            <span class="session-badge" data-en="First Session" data-ur="پہلا سیشن">First Session</span>
           </div>
           <div class="session-times-bar">
             <span class="time-pill" data-for="IST">IST: <strong>9:30 pm</strong></span>
@@ -1707,15 +1567,11 @@ body.urdu-mode .faq-trigger { text-align: right; }
             <h3 class="session-subject" data-en="Tafsīr of Sūrah al-Fātiḥah and Sūrah al-Kahf" data-ur="تفسیر سورۃ الفاتحہ اور سورۃ الکہف">Tafsīr of Sūrah al-Fātiḥah and Sūrah al-Kahf</h3>
             <div class="session-subject-arabic">تفسير سورة الفاتحة وسورة الكهف</div>
             <div class="session-teacher-row">
-              <i class="fas fa-user-tie"></i>
-              <strong data-en="Shaykh Hassan Sarim" data-ur="شیخ حسن صارم">Shaykh Hassan Sarim</strong>
+              <i class="fas fa-user"></i>
+              <span data-en="Shaykh Hassan Sarim" data-ur="شیخ حسن صارم">Shaykh Hassan Sarim</span>
             </div>
-            <p class="session-desc" data-en="Profound exegesis of Umm al-Qur'an (Al-Fatihah) and the four grand narratives in Surah al-Kahf: Trials of Faith, Wealth, Knowledge, and Power — unpacking their guidance for protecting against modern tribulations." data-ur="ام القرآن سورۃ الفاتحہ کی عمیق تفسیری حکمتیں اور سورۃ الکہف کے چار بڑے فتنوں (دین، مال، علم، اور اقتدار کی آزمائش) اور فتنہ دجال سے حفاظت کے نبوی اسباق۔">
-              Profound exegesis of Umm al-Qur'an (Al-Fatihah) and the four grand narratives in Surah al-Kahf: Trials of Faith, Wealth, Knowledge, and Power — unpacking their guidance for protecting against modern tribulations.
-            </p>
           </div>
           <div class="session-actions">
-            <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20want%20link%20for%20Tafsir%20session%20(9%20Nov)" target="_blank" class="session-action-btn"><i class="fab fa-whatsapp"></i> Join Link</a>
             <button class="session-action-btn" onclick="copySessionInfo('Day 3 Session 1: Tafsir of Surah al-Fatihah and Surah al-Kahf - 9:30 PM IST / 9:00 PM PKT / 7:00 PM KSA')"><i class="fas fa-copy"></i> Copy Time</button>
           </div>
         </div>
@@ -1725,8 +1581,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
       <div class="session-card" style="border-color:rgba(201,168,76,0.6)">
         <div class="session-top">
           <div class="session-tag-group">
-            <span class="session-badge closing"><i class="fas fa-flag-checkered"></i> <span data-en="Closing Session (10 Minutes)" data-ur="اختتامی کلمات و نصیحت (10 منٹ)">Closing Session (10 Minutes)</span></span>
-            <span class="session-badge"><i class="fas fa-book-open"></i> Scholastic Advice &amp; Du‘ā’</span>
+            <span class="session-badge closing" data-en="Closing Session (10 mins)" data-ur="اختتامی سیشن (10 منٹ)">Closing Session (10 mins)</span>
           </div>
           <div class="session-times-bar">
             <span class="time-pill" data-for="IST">IST: <strong>12:30 am*</strong></span>
@@ -1736,15 +1591,8 @@ body.urdu-mode .faq-trigger { text-align: right; }
         </div>
         <div class="session-body">
           <div>
-            <h3 class="session-subject" data-en="Closing Assembly, Scholastic Advice &amp; Concluding Du‘ā’" data-ur="اختتامی اجلاس، وصایا و ہدایات اور اجتماعی دعا">Closing Assembly, Scholastic Advice &amp; Concluding Du‘ā’</h3>
-            <div class="session-subject-arabic">الجلسة الختامية وتوجيهات لطلاب العلم والدعاء</div>
-            <div class="session-teacher-row">
-              <i class="fas fa-users"></i>
-              <strong data-en="Ṭālib al-‘Ilm Academic Board &amp; Instructors" data-ur="انتظامیہ و مشائخ دورہ علمیہ">Ṭālib al-‘Ilm Academic Board &amp; Instructors</strong>
-            </div>
-            <p class="session-desc" data-en="A concise 10-minute closing address with concluding advice for attendees, guidance on continuous talab al-‘ilm, revision using the study material, and closing du‘ā’." data-ur="دس منٹ کا پرتاثیر اختتامی سیشن جس میں شرکاء کے لیے تسلسلِ طلبِ علم کی وصیت، فراہم کردہ کتب کے ذریعے دہرائی اور دعائے خیر کی جائے گی۔">
-              A concise 10-minute closing address with concluding advice for attendees, guidance on continuous talab al-‘ilm, revision using the study material, and closing du‘ā’.
-            </p>
+            <h3 class="session-subject" data-en="Closing Session &amp; Du‘ā’" data-ur="اختتامی نشست و دعا">Closing Session &amp; Du‘ā’</h3>
+            <div class="session-subject-arabic">الجلسة الختامية والدعاء</div>
           </div>
           <div class="session-actions">
             <a href="#study-material" class="session-action-btn" style="background:var(--gold);color:var(--bg-main);font-weight:700"><i class="fas fa-book-reader"></i> Study Material</a>
@@ -1753,32 +1601,32 @@ body.urdu-mode .faq-trigger { text-align: right; }
         </div>
       </div>
 
-      <!-- Midnight Asterisk Callout -->
+      <!-- Note Callout -->
       <div class="footnote-alert">
         <i class="fas fa-info-circle"></i>
         <div>
-          <strong data-en="* Note on Closing Session Timing:" data-ur="* اختتامی سیشن کے وقت کے متعلق اہم وضاحت:">* Note on Closing Session Timing:</strong>
-          <span data-en=" The closing session falls just after midnight in India (12:30 am IST) and Pakistan (12:00 am PKT) entering early Tuesday, 10 November; it is 10:00 pm on Monday evening in Saudi Arabia (KSA)." data-ur=" اختتامی سیشن انڈیا (12:30 بجے رات) اور پاکستان (12:00 بجے رات) میں منگل کی شب 10 نومبر کو پڑے گا؛ جبکہ سعودی عرب میں پیر 9 نومبر کی رات 10:00 بجے ہوگا۔">
-            The closing session falls just after midnight in India (12:30 am IST) and Pakistan (12:00 am PKT) entering early Tuesday, 10 November; it is 10:00 pm on Monday evening in Saudi Arabia (KSA).
+          <strong data-en="* Note:" data-ur="* وضاحت:">* Note:</strong>
+          <span data-en=" The closing session falls just after midnight in India and Pakistan (early Tuesday, 10 November); it is 10:00 pm on Monday in Saudi Arabia." data-ur=" اختتامی سیشن انڈیا اور پاکستان میں منگل 10 نومبر کے آغاز (رات 12 بجے کے بعد) میں ہوگا، اور سعودی عرب میں پیر 9 نومبر کی رات 10:00 بجے ہوگا۔">
+            The closing session falls just after midnight in India and Pakistan (early Tuesday, 10 November); it is 10:00 pm on Monday in Saudi Arabia.
           </span>
         </div>
       </div>
     </div>
 
-    <!-- ALL DAYS VIEW CONTAINER (dynamically rendered on tab switch) -->
+    <!-- ALL DAYS VIEW CONTAINER -->
     <div class="day-panel" id="day-all"></div>
 
   </div>
 </section>
 
-<!-- SUBJECTS & CLASSICAL TEXTS -->
+<!-- SUBJECTS SECTION -->
 <section class="subjects-section section-padding" id="subjects">
   <div class="container fade-in-section">
     <div class="text-center">
-      <div class="section-label" data-en="Dawrah Curriculum" data-ur="دورہ کا نصاب">Dawrah Curriculum</div>
-      <h2 class="section-heading" data-en="The 7 Core Disciplines &amp; Treatises" data-ur="سات بنیادی علوم اور تدریسی رسائل">The 7 Core Disciplines &amp; Treatises</h2>
-      <p class="section-subtitle" data-en="Anchored upon the Quran, the authentic Sunnah, and classical treatises of the Salaf as-Salih." data-ur="کتاب و سنت اور منہج سلف صالحین کے مطابق منتخب کردہ مستند علمی ذخیرہ۔">
-        Anchored upon the Quran, the authentic Sunnah, and classical treatises of the Salaf as-Salih.
+      <div class="section-label" data-en="Curriculum" data-ur="نصاب">Curriculum</div>
+      <h2 class="section-heading" data-en="The 7 Subjects" data-ur="سات مضامین">The 7 Subjects</h2>
+      <p class="section-subtitle" data-en="Classical Islamic texts studied during the Dawrah." data-ur="دورہ میں پڑھائے جانے والے منتخب کلاسیکی متون۔">
+        Classical Islamic texts studied during the Dawrah.
       </p>
     </div>
 
@@ -1787,98 +1635,84 @@ body.urdu-mode .faq-trigger { text-align: right; }
       <!-- Subject 1 -->
       <div class="subject-card">
         <div class="subject-card-number">01</div>
-        <div class="subject-icon-box"><i class="fas fa-heart"></i></div>
-        <div class="subject-discipline">Ḥadīth &amp; Tazkiyah</div>
+        <div class="subject-discipline">Ḥadīth</div>
         <h3 class="subject-title">The Importance of Ikhlāṣ: Ḥadīth “Innamā al-A‘māl bin-Niyyāt”</h3>
         <div class="subject-arabic">أهمية الإخلاص: حديث «إنما الأعمال بالنيات»</div>
-        <div class="subject-teacher-badge"><i class="fas fa-chalkboard-user"></i> Shaykh Zafar Alam bin Ziya ur-Rahman</div>
-        <p class="subject-desc">The bedrock of all actions in Islam. Exegesis of the prophetic maxim establishing that outer deeds hold no weight without sincere intention for Allah alone.</p>
+        <div class="subject-teacher-badge"><i class="fas fa-user"></i> Shaykh Zafar Alam bin Ziya ur-Rahman al-Athari</div>
       </div>
 
       <!-- Subject 2 -->
       <div class="subject-card">
         <div class="subject-card-number">02</div>
-        <div class="subject-icon-box"><i class="fas fa-shield-halved"></i></div>
-        <div class="subject-discipline">‘Aqīdah &amp; Tawḥīd</div>
+        <div class="subject-discipline">‘Aqīdah</div>
         <h3 class="subject-title">Kashf ash-Shubuhāt</h3>
-        <div class="subject-arabic">كشف الشبهات للإمام محمد بن عبد الوهاب</div>
-        <div class="subject-teacher-badge"><i class="fas fa-chalkboard-user"></i> Ustadh Muhammad Abu Bakr al-Lahori</div>
-        <p class="subject-desc">A foundational manual dismantling common philosophical and polytheistic doubts with decisive, unassailable proofs straight from the Holy Qur'an.</p>
+        <div class="subject-arabic">كشف الشبهات</div>
+        <div class="subject-teacher-badge"><i class="fas fa-user"></i> Ustadh Muhammad Abu Bakr bin Yasir al-Lahori</div>
       </div>
 
       <!-- Subject 3 -->
       <div class="subject-card">
         <div class="subject-card-number">03</div>
-        <div class="subject-icon-box"><i class="fas fa-hands-praying"></i></div>
-        <div class="subject-discipline">Fiqh aṣ-Ṣalāh</div>
+        <div class="subject-discipline">Fiqh</div>
         <h3 class="subject-title">Shurūṭ aṣ-Ṣalāh wa Arkānuhā wa Wājibātuhā</h3>
         <div class="subject-arabic">شروط الصلاة وأركانها وواجباتها</div>
-        <div class="subject-teacher-badge"><i class="fas fa-chalkboard-user"></i> Shaykh Muhammad Aakif al-Makki</div>
-        <p class="subject-desc">A structured and systematic jurisprudence breakdown of the nine conditions, fourteen pillars, and eight obligations of the daily Islamic prayer.</p>
+        <div class="subject-teacher-badge"><i class="fas fa-user"></i> Shaykh Akif Hikmat al-Makki</div>
       </div>
 
       <!-- Subject 4 -->
       <div class="subject-card" style="border-color:rgba(216, 128, 156, 0.4)">
         <div class="subject-card-number" style="color:rgba(216, 128, 156, 0.2)">04</div>
-        <div class="subject-icon-box" style="background:var(--sister-bg);color:var(--sister-pink);border-color:rgba(216, 128, 156, 0.3)"><i class="fas fa-venus"></i></div>
-        <div class="subject-discipline" style="color:var(--sister-pink)">Fiqh aṭ-Ṭahārah (Sisters)</div>
+        <div class="subject-discipline" style="color:var(--sister-pink)">Fiqh (Sisters)</div>
         <h3 class="subject-title">Bāb al-Ḥayḍ from ad-Durar al-Bahiyyah</h3>
-        <div class="subject-arabic">باب الحيض من الدرر البهية للشوكاني</div>
-        <div class="subject-teacher-badge"><i class="fas fa-chalkboard-user"></i> Ustadhah Bint Raees Ahmad al-Athariyyah</div>
-        <p class="subject-desc">Specialized fiqh of female purification, answering practical contemporary scenarios regarding menstruation, purification, and worship with scholarly precision.</p>
+        <div class="subject-arabic">باب الحيض من الدرر البهية</div>
+        <div class="subject-teacher-badge"><i class="fas fa-user"></i> Ustadhah Bint Raees Ahmad al-Khadeejiyyah al-Athariyyah</div>
       </div>
 
       <!-- Subject 5 -->
       <div class="subject-card">
         <div class="subject-card-number">05</div>
-        <div class="subject-icon-box"><i class="fas fa-link"></i></div>
-        <div class="subject-discipline">Musalsalāt &amp; Sanad</div>
+        <div class="subject-discipline">Ḥadīth</div>
         <h3 class="subject-title">Al-Ḥadīth al-Musalsal bil-Awwaliyyah</h3>
-        <div class="subject-arabic">الحديث المسلسل بالأولية «الراحمون يرحمهم الرحمن»</div>
-        <div class="subject-teacher-badge"><i class="fas fa-chalkboard-user"></i> Abu Mu‘awiyah Muhammad Qurayshi</div>
-        <p class="subject-desc">The historic first narration imparted from teacher to student throughout the centuries, establishing the divine virtue of showing mercy to the creation.</p>
+        <div class="subject-arabic">الحديث المسلسل بالأولية</div>
+        <div class="subject-teacher-badge"><i class="fas fa-user"></i> Abu Mu‘awiyah Muhammad Qurayshi al-Athari</div>
       </div>
 
       <!-- Subject 6 -->
       <div class="subject-card">
         <div class="subject-card-number">06</div>
-        <div class="subject-icon-box"><i class="fas fa-feather-pointed"></i></div>
-        <div class="subject-discipline">Manhaj &amp; Arabic Ode</div>
+        <div class="subject-discipline">Poetry</div>
         <h3 class="subject-title">Al-Qaṣīdah al-Waḍḍāḥiyyah</h3>
-        <div class="subject-arabic">القصيدة الوضاحية في الدفاع عن أم المؤمنين عائشة</div>
-        <div class="subject-teacher-badge"><i class="fas fa-chalkboard-user"></i> Abu Mu‘awiyah Muhammad Qurayshi</div>
-        <p class="subject-desc">The celebrated didactic poem spoken from the tongue of the Mother of the Believers, affirming her honor, chastity, and unparalleled virtues from the Qur'an.</p>
+        <div class="subject-arabic">القصيدة الوضاحية</div>
+        <div class="subject-teacher-badge"><i class="fas fa-user"></i> Abu Mu‘awiyah Muhammad Qurayshi al-Athari</div>
       </div>
 
       <!-- Subject 7 -->
       <div class="subject-card">
         <div class="subject-card-number">07</div>
-        <div class="subject-icon-box"><i class="fas fa-book-quran"></i></div>
-        <div class="subject-discipline">Tafsīr al-Qur’ān</div>
+        <div class="subject-discipline">Tafsīr</div>
         <h3 class="subject-title">Tafsīr of Sūrah al-Fātiḥah and Sūrah al-Kahf</h3>
         <div class="subject-arabic">تفسير سورة الفاتحة وسورة الكهف</div>
-        <div class="subject-teacher-badge"><i class="fas fa-chalkboard-user"></i> Shaykh Hassan Sarim</div>
-        <p class="subject-desc">Unfolding the spiritual depths of the opening Surah repeated in every rak'ah, along with the weekly fortress of Surah al-Kahf that illuminates between two Fridays.</p>
+        <div class="subject-teacher-badge"><i class="fas fa-user"></i> Shaykh Hassan Sarim</div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- FACULTY / MASHAYIKH SECTION -->
+<!-- TEACHERS SECTION -->
 <section class="faculty-section section-padding" id="faculty">
   <div class="container fade-in-section">
     <div class="text-center">
-      <div class="section-label" data-en="Scholastic Guidance" data-ur="اساتذہ و مشائخ">Scholastic Guidance</div>
-      <h2 class="section-heading" data-en="Taught by Scholars of the Sunnah" data-ur="اہل سنت کے جید علماء کی زیر نگرانی">Taught by Scholars of the Sunnah</h2>
-      <p class="section-subtitle" data-en="Meet the qualified teachers imparting the sacred texts during the First Dawrah ‘Ilmiyyah." data-ur="پہلی دورہ علمیہ میں تدریسی خدمات انجام دینے والے مشائخ و اساتذہ کرام کا تعارف۔">
-        Meet the qualified teachers imparting the sacred texts during the First Dawrah ‘Ilmiyyah.
+      <div class="section-label" data-en="Teachers" data-ur="اساتذہ">Teachers</div>
+      <h2 class="section-heading" data-en="Instructors &amp; Scholars" data-ur="شیوخ و اساتذہ کرام">Instructors &amp; Scholars</h2>
+      <p class="section-subtitle" data-en="Scholars and teachers conducting the sessions." data-ur="دورہ میں تدریس فرمانے والے اساتذہ۔">
+        Scholars and teachers conducting the sessions.
       </p>
     </div>
 
     <div class="faculty-grid">
 
-      <!-- Faculty 1 -->
+      <!-- Teacher 1 -->
       <div class="faculty-card">
         <div class="faculty-card-top"></div>
         <div class="faculty-card-body">
@@ -1887,68 +1721,44 @@ body.urdu-mode .faq-trigger { text-align: right; }
           </div>
           <h3 class="faculty-name">Shaykh Zafar Alam al-Athari</h3>
           <div class="faculty-name-arabic">الشيخ ظفر عالم بن ضياء الرحمن الأثري</div>
-          <div class="faculty-role">Senior Scholar &amp; Academic Supervisor</div>
-          <div class="faculty-subject-tag"><i class="fas fa-book"></i> Importance of Ikhlāṣ</div>
-          <ul class="bio-list">
-            <li>Senior scholar with over 30 years in teaching, research, and Dawah.</li>
-            <li>Former official Daee at the Dawah &amp; Guidance Center, Riyadh (KSA).</li>
-            <li>Graduate of Jamia Asaria Darul Hadees &amp; certified in Arabic from Islamic University of Madinah.</li>
-          </ul>
+          <div class="faculty-subject-tag">The Importance of Ikhlāṣ</div>
         </div>
       </div>
 
-      <!-- Faculty 2 -->
+      <!-- Teacher 2 -->
       <div class="faculty-card">
         <div class="faculty-card-top"></div>
         <div class="faculty-card-body">
-          <div class="faculty-avatar">MA</div>
-          <h3 class="faculty-name">Shaykh Muhammad Aakif al-Makki</h3>
-          <div class="faculty-name-arabic">الشيخ محمد عاكف المكي</div>
-          <div class="faculty-role">Scholar of Fiqh &amp; Sunnah (Makkah al-Mukarramah)</div>
-          <div class="faculty-subject-tag"><i class="fas fa-book"></i> Shurūṭ aṣ-Ṣalāh wa Arkānuhā</div>
-          <ul class="bio-list">
-            <li>Esteemed scholar based in Makkah al-Mukarramah dedicated to Fiqh studies.</li>
-            <li>Extensive expertise in the jurisprudence of worship and classical Salafi texts.</li>
-            <li>Renowned for clear methodology and reliance on authentic Sunnah traditions.</li>
-          </ul>
+          <div class="faculty-avatar">AH</div>
+          <h3 class="faculty-name">Shaykh Akif Hikmat al-Makki</h3>
+          <div class="faculty-name-arabic">الشيخ عاكف حكمت المكي</div>
+          <div class="faculty-subject-tag">Shurūṭ aṣ-Ṣalāh wa Arkānuhā</div>
         </div>
       </div>
 
-      <!-- Faculty 3 -->
+      <!-- Teacher 3 -->
       <div class="faculty-card">
         <div class="faculty-card-top"></div>
         <div class="faculty-card-body">
           <div class="faculty-avatar">HS</div>
           <h3 class="faculty-name">Shaykh Hassan Sarim</h3>
           <div class="faculty-name-arabic">الشيخ حسن صارم</div>
-          <div class="faculty-role">Scholar in Qur'anic Sciences &amp; Tafsīr</div>
-          <div class="faculty-subject-tag"><i class="fas fa-book"></i> Tafsīr al-Fātiḥah &amp; al-Kahf</div>
-          <ul class="bio-list">
-            <li>Distinguished researcher and lecturer in Tafsir and Quranic sciences.</li>
-            <li>Specializes in elucidating classical exegesis with contemporary relevance.</li>
-            <li>Delivers systematic commentaries on the Surahs and thematic Quranic lessons.</li>
-          </ul>
+          <div class="faculty-subject-tag">Tafsīr al-Fātiḥah &amp; al-Kahf</div>
         </div>
       </div>
 
-      <!-- Faculty 4 -->
+      <!-- Teacher 4 -->
       <div class="faculty-card">
         <div class="faculty-card-top"></div>
         <div class="faculty-card-body">
           <div class="faculty-avatar">AB</div>
           <h3 class="faculty-name">Ustadh Muhammad Abu Bakr al-Lahori</h3>
           <div class="faculty-name-arabic">الأستاذ محمد أبو بكر بن ياسر اللاهوري</div>
-          <div class="faculty-role">Instructor in ‘Aqīdah &amp; Comparative Theology</div>
-          <div class="faculty-subject-tag"><i class="fas fa-book"></i> Kashf ash-Shubuhāt</div>
-          <ul class="bio-list">
-            <li>Well-known teacher and researcher in Salafi Aqeedah based in Lahore, Pakistan.</li>
-            <li>Expert in dismantling modern deviations and theological ambiguities.</li>
-            <li>Provides rigorous, step-by-step guidance on classical treatises of Tawhid.</li>
-          </ul>
+          <div class="faculty-subject-tag">Kashf ash-Shubuhāt</div>
         </div>
       </div>
 
-      <!-- Faculty 5 -->
+      <!-- Teacher 5 -->
       <div class="faculty-card">
         <div class="faculty-card-top"></div>
         <div class="faculty-card-body">
@@ -1957,32 +1767,20 @@ body.urdu-mode .faq-trigger { text-align: right; }
           </div>
           <h3 class="faculty-name">Abu Mu‘awiyah Muhammad Qurayshi</h3>
           <div class="faculty-name-arabic">أبو معاوية محمد قريشي الأثري</div>
-          <div class="faculty-role">Project Head &amp; Lead Instructor</div>
-          <div class="faculty-subject-tag"><i class="fas fa-book"></i> Musalsalāt &amp; al-Qasīdah</div>
-          <ul class="bio-list">
-            <li>Specialized in Hanbali &amp; Hanafi comparative Fiqh with first-rank honors.</li>
-            <li>Holder of 130+ continuous chains of transmission (Asanīd) from global scholars.</li>
-            <li>Direct student of prominent disciples of Shaykh Ibn Baz and Shaykh Albani.</li>
-          </ul>
+          <div class="faculty-subject-tag">Al-Ḥadīth al-Musalsal &amp; al-Qaṣīdah</div>
         </div>
       </div>
 
-      <!-- Faculty 6 -->
+      <!-- Teacher 6 -->
       <div class="faculty-card" style="border-color:rgba(216, 128, 156, 0.4)">
         <div class="faculty-card-top" style="background:linear-gradient(135deg, #d8809c 0%, #fae39c 100%)"></div>
         <div class="faculty-card-body">
           <div class="faculty-avatar" style="border-color:var(--sister-pink);color:var(--sister-pink)">
-            <i class="fas fa-user-graduate"></i>
+            <i class="fas fa-user"></i>
           </div>
           <h3 class="faculty-name">Ustadhah Bint Raees Ahmad</h3>
           <div class="faculty-name-arabic">الأستاذة بنت رئيس أحمد الخديجية الأثرية</div>
-          <div class="faculty-role" style="color:var(--sister-pink)">Female Instructor in Fiqh &amp; Sunnah</div>
-          <div class="faculty-subject-tag" style="border-color:var(--sister-pink)"><i class="fas fa-book"></i> Bāb al-Ḥayḍ (Sisters)</div>
-          <ul class="bio-list">
-            <li>Respected female educator with extensive experience teaching women's fiqh.</li>
-            <li>Offers dedicated, clear instruction in menstrual and purification jurisprudence.</li>
-            <li>Committed to empowering sisters with sound classical methodology.</li>
-          </ul>
+          <div class="faculty-subject-tag" style="border-color:var(--sister-pink)">Bāb al-Ḥayḍ (Sisters)</div>
         </div>
       </div>
 
@@ -1994,28 +1792,27 @@ body.urdu-mode .faq-trigger { text-align: right; }
 <section class="material-section section-padding" id="study-material">
   <div class="container fade-in-section">
     <div class="text-center">
-      <div class="section-label" data-en="Coursepack &amp; Resources" data-ur="نصاب اور درسی مواد">Coursepack &amp; Resources</div>
-      <h2 class="section-heading" data-en="Student Study Material &amp; Mutūn" data-ur="طالب علم کا درسی مواد اور متون">Student Study Material &amp; Mutūn</h2>
-      <p class="section-subtitle" data-en="Access the official compiled coursepack for the First Dawrah ‘Ilmiyyah. Containing the complete classical texts, sanad diagrams, and structured notes." data-ur="پہلی دورہ علمیہ کا باضابطہ درسی کتابچہ، جس میں تمام متون، اسانید اور اہم علمی حواشی جمع کیے گئے ہیں۔">
-        Access the official compiled coursepack for the First Dawrah ‘Ilmiyyah. Containing the complete classical texts, sanad diagrams, and structured notes.
+      <div class="section-label" data-en="Resources" data-ur="وسائل">Resources</div>
+      <h2 class="section-heading" data-en="Student Study Material" data-ur="طالب علم کا درسی مواد">Student Study Material</h2>
+      <p class="section-subtitle" data-en="Download the compiled texts and notes for the Dawrah." data-ur="دورہ کے تمام متون اور درسی اوراق ڈاؤن لوڈ کریں۔">
+        Download the compiled texts and notes for the Dawrah.
       </p>
     </div>
 
-    <!-- Main Material Hero Card -->
+    <!-- Main Material Card -->
     <div class="material-hero-card">
       <div class="material-flex-layout">
         <div class="material-visual-box">
-          <span class="material-pdf-badge">PDF DOCUMENT</span>
-          <div class="material-book-icon"><i class="fas fa-book-journal-whills"></i></div>
+          <div class="material-book-icon"><i class="fas fa-file-pdf"></i></div>
           <div class="material-visual-title">Dawrah Coursepack</div>
-          <div class="material-visual-sub">Official Textual Compilation</div>
+          <div class="material-visual-sub">PDF Compilation</div>
         </div>
 
-        <div class="material-details-box">
-          <h3 class="material-main-heading" data-en="The First Dawrah ‘Ilmiyyah Official Study Packet" data-ur="الدورة العلمية الأولى — درسی کتابچہ برائے طلبہ">The First Dawrah ‘Ilmiyyah Official Study Packet</h3>
-          <div class="material-arabic-title">مذكرة نصوص ومتون الدورة العلمية الأولى</div>
-          <p class="material-description" data-en="This comprehensive study guide compiles all the seven treatises taught throughout the three-day seminar. Students are highly advised to download the PDF, print or review it prior to the sessions, and utilize it for taking marginal notes (ḥawāshī) and marking scholarly benefits directly with the Mashāyikh." data-ur="یہ جامع درسی کتابچہ دورہ کے تمام سات متون پر مشتمل ہے۔ شرکاء کو تاکید کی جاتی ہے کہ وہ سیشنز شروع ہونے سے قبل اس پی ڈی ایف کو ڈاؤن لوڈ کریں یا پرنٹ کر لیں، تاکہ دورانِ درس مشائخ کے افادات اور فوائد کو اپنے پاس قلمبند کر سکیں۔">
-            This comprehensive study guide compiles all the seven treatises taught throughout the three-day seminar. Students are highly advised to download the PDF, print or review it prior to the sessions, and utilize it for taking marginal notes (ḥawāshī) and marking scholarly benefits directly with the Mashāyikh.
+        <div>
+          <h3 class="material-main-heading" data-en="Official Dawrah Study Packet" data-ur="الدورة العلمية الأولى: مذكرة الطالب">Official Dawrah Study Packet</h3>
+          <div class="material-arabic-title">مذكرة متون الدورة العلمية الأولى</div>
+          <p class="material-description" data-en="Contains the Arabic texts for all 7 subjects. Students can download or print the PDF to follow along during the sessions." data-ur="اس کتابچے میں تمام ساتوں کتب کے عربی متون شامل ہیں۔ سیشنز کے دوران ساتھ پڑھنے کے لیے اسے ڈاؤن لوڈ یا پرنٹ کر لیں۔">
+            Contains the Arabic texts for all 7 subjects. Students can download or print the PDF to follow along during the sessions.
           </p>
 
           <div class="material-buttons-row">
@@ -2023,10 +1820,10 @@ body.urdu-mode .faq-trigger { text-align: right; }
               <i class="fab fa-google-drive"></i> <span data-en="Open in Google Drive" data-ur="گوگل ڈرائیو پر کھولیں">Open in Google Drive</span>
             </a>
             <a href="https://drive.google.com/uc?export=download&id=1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW" target="_blank" rel="noopener" class="btn btn-outline">
-              <i class="fas fa-download"></i> <span data-en="Direct Download" data-ur="براہ راست ڈاؤن لوڈ">Direct Download</span>
+              <i class="fas fa-download"></i> <span data-en="Direct Download" data-ur="ڈاؤن لوڈ کریں">Direct Download</span>
             </a>
             <button class="btn btn-outline" onclick="toggleDrivePreview()">
-              <i class="fas fa-eye"></i> <span id="previewBtnText" data-en="Preview Document Online" data-ur="آن لائن پیش نظارہ کریں">Preview Document Online</span>
+              <i class="fas fa-eye"></i> <span id="previewBtnText" data-en="Preview Online" data-ur="آن لائن دیکھیں">Preview Online</span>
             </button>
             <button class="btn btn-outline" onclick="copyMaterialLink()">
               <i class="fas fa-link"></i> <span data-en="Copy Link" data-ur="لنک کاپی کریں">Copy Link</span>
@@ -2036,105 +1833,84 @@ body.urdu-mode .faq-trigger { text-align: right; }
       </div>
     </div>
 
-    <!-- Embedded Google Drive Preview (Collapsible) -->
+    <!-- Drive Preview (Collapsible) -->
     <div class="embed-preview-wrapper" id="driveEmbedWrapper">
       <div class="embed-preview-header">
-        <span class="embed-preview-title"><i class="fas fa-file-pdf"></i> <span data-en="Google Drive Document Viewer" data-ur="گوگل ڈرائیو دستاویز پیش نظارہ">Google Drive Document Viewer</span></span>
-        <button class="embed-close-btn" onclick="toggleDrivePreview()" aria-label="Close Preview"><i class="fas fa-times"></i></button>
+        <span class="embed-preview-title"><i class="fas fa-file-pdf"></i> Document Preview</span>
+        <button class="embed-close-btn" onclick="toggleDrivePreview()" aria-label="Close"><i class="fas fa-times"></i></button>
       </div>
-      <iframe id="driveIframe" class="embed-iframe" src="" allow="autoplay" title="Study Material PDF Viewer"></iframe>
+      <iframe id="driveIframe" class="embed-iframe" src="" allow="autoplay" title="Study Material Viewer"></iframe>
     </div>
 
-    <!-- Texts Included in Coursepack Grid -->
-    <div class="material-mutun-title" data-en="Treatises Included Within The Study Guide" data-ur="کتابچے میں شامل تمام متون کی فہرست">Treatises Included Within The Study Guide</div>
+    <!-- Texts in Coursepack -->
+    <div class="material-mutun-title" data-en="Texts in the Coursepack" data-ur="کتابچے میں شامل متون">Texts in the Coursepack</div>
     <div class="material-mutun-grid">
       <div class="mutun-item">
         <div class="mutun-num">1</div>
-        <div class="mutun-info">
-          <h4>Ḥadīth al-A‘māl bin-Niyyāt</h4>
-          <p>Text of Hadith Umar with classical annotations on sincerity</p>
-        </div>
+        <div class="mutun-info"><h4>Ḥadīth al-A‘māl bin-Niyyāt</h4></div>
       </div>
       <div class="mutun-item">
         <div class="mutun-num">2</div>
-        <div class="mutun-info">
-          <h4>Kashf ash-Shubuhāt</h4>
-          <p>Full treatise of Shaykh al-Islam Muhammad ibn Abd al-Wahhab</p>
-        </div>
+        <div class="mutun-info"><h4>Kashf ash-Shubuhāt</h4></div>
       </div>
       <div class="mutun-item">
         <div class="mutun-num">3</div>
-        <div class="mutun-info">
-          <h4>Shurūṭ aṣ-Ṣalāh wa Arkānuhā</h4>
-          <p>Jurisprudential manual on pillars and prerequisites of Salah</p>
-        </div>
+        <div class="mutun-info"><h4>Shurūṭ aṣ-Ṣalāh wa Arkānuhā</h4></div>
       </div>
       <div class="mutun-item">
         <div class="mutun-num">4</div>
-        <div class="mutun-info">
-          <h4>Bāb al-Ḥayḍ (ad-Durar al-Bahiyyah)</h4>
-          <p>Imam ash-Shawkani’s concise legal text on menstrual rulings</p>
-        </div>
+        <div class="mutun-info"><h4>Bāb al-Ḥayḍ (ad-Durar al-Bahiyyah)</h4></div>
       </div>
       <div class="mutun-item">
         <div class="mutun-num">5</div>
-        <div class="mutun-info">
-          <h4>Al-Ḥadīth al-Musalsal bil-Awwaliyyah</h4>
-          <p>The Hadith of Mercy with continuous Isnad chain</p>
-        </div>
+        <div class="mutun-info"><h4>Al-Ḥadīth al-Musalsal bil-Awwaliyyah</h4></div>
       </div>
       <div class="mutun-item">
         <div class="mutun-num">6</div>
-        <div class="mutun-info">
-          <h4>Al-Qaṣīdah al-Waḍḍāḥiyyah</h4>
-          <p>The classical poetic ode in honor of Mother of the Believers</p>
-        </div>
+        <div class="mutun-info"><h4>Al-Qaṣīdah al-Waḍḍāḥiyyah</h4></div>
       </div>
       <div class="mutun-item">
         <div class="mutun-num">7</div>
-        <div class="mutun-info">
-          <h4>Tafsīr Sūrah al-Fātiḥah &amp; al-Kahf</h4>
-          <p>Exegesis outlines and thematic lesson sheets</p>
-        </div>
+        <div class="mutun-info"><h4>Tafsīr Sūrah al-Fātiḥah &amp; al-Kahf</h4></div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- REGISTRATION & DETAILS SECTION -->
+<!-- REGISTRATION & FAQS SECTION -->
 <section class="reg-section section-padding" id="registration">
   <div class="container fade-in-section">
     <div class="text-center">
-      <div class="section-label" data-en="How to Attend" data-ur="شرکت کا طریقہ کار">How to Attend</div>
-      <h2 class="section-heading" data-en="Free Enrollment &amp; Live Access" data-ur="مفت اندراج اور لائیو شرکت">Free Enrollment &amp; Live Access</h2>
-      <p class="section-subtitle" data-en="The Dawrah is 100% free and open worldwide for brothers and sisters seeking authentic knowledge." data-ur="یہ دورہ دنیا بھر کے تمام طلبہ و طالبات کے لیے بالکل مفت اور اوپن ہے۔">
-        The Dawrah is 100% free and open worldwide for brothers and sisters seeking authentic knowledge.
+      <div class="section-label" data-en="Registration" data-ur="اندراج">Registration</div>
+      <h2 class="section-heading" data-en="Free Online Enrollment" data-ur="مفت آن لائن شرکت">Free Online Enrollment</h2>
+      <p class="section-subtitle" data-en="The Dawrah is completely free and open to everyone." data-ur="تمام احباب کے لیے بالکل مفت۔">
+        The Dawrah is completely free and open to everyone.
       </p>
     </div>
 
     <div class="reg-card-grid">
       <div class="reg-card">
-        <div class="reg-card-icon"><i class="fas fa-laptop-code"></i></div>
-        <h3 class="reg-card-title" data-en="100% Online" data-ur="مکمل آن لائن">100% Online</h3>
+        <div class="reg-card-icon"><i class="fas fa-globe"></i></div>
+        <h3 class="reg-card-title" data-en="India &amp; International" data-ur="انڈیا اور بین الاقوامی">India &amp; International</h3>
         <div class="reg-card-fee">FREE</div>
-        <p class="reg-card-desc" data-en="Live streaming via Google Meet &amp; private YouTube broadcast with dedicated question segments." data-ur="گوگل میٹ اور پرائیویٹ یوٹیوب لائیو کے ذریعے سوال و جواب کے ساتھ نشر کیا جائے گا۔">Live streaming via Google Meet &amp; private YouTube broadcast with dedicated question segments.</p>
-        <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20want%20to%20enroll%20for%20the%20Dawrah%20Ilmiyyah" target="_blank" class="btn btn-primary" style="width:100%"><i class="fab fa-whatsapp"></i> Register India / Intl</a>
+        <p class="reg-card-desc" data-en="Live links and reminders shared on WhatsApp." data-ur="واٹس ایپ پر کلاس لنکس فراہم کیے جائیں گے۔">Live links and reminders shared on WhatsApp.</p>
+        <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20want%20to%20enroll%20for%20the%20Dawrah%20Ilmiyyah" target="_blank" class="btn btn-primary" style="width:100%"><i class="fab fa-whatsapp"></i> Register (+91)</a>
       </div>
 
       <div class="reg-card" style="border-color:var(--gold)">
-        <div class="reg-card-icon"><i class="fas fa-book-open-reader"></i></div>
-        <h3 class="reg-card-title" data-en="Study Material Included" data-ur="مکمل درسی مواد شامل">Study Material Included</h3>
-        <div class="reg-card-fee">ACCESS</div>
-        <p class="reg-card-desc" data-en="The complete official compiled PDF coursepack is provided freely for all students to follow along." data-ur="تمام شرکاء کے لیے کتب و متون پر مشتمل درسی کتابچہ مفت فراہم کر دیا گیا ہے۔">The complete official compiled PDF coursepack is provided freely for all students to follow along.</p>
-        <a href="#study-material" class="btn btn-primary" style="width:100%"><i class="fas fa-file-pdf"></i> Download Coursepack</a>
+        <div class="reg-card-icon"><i class="fas fa-book-open"></i></div>
+        <h3 class="reg-card-title" data-en="Pakistan" data-ur="پاکستان">Pakistan</h3>
+        <div class="reg-card-fee">FREE</div>
+        <p class="reg-card-desc" data-en="WhatsApp registration and support for Pakistan." data-ur="پاکستان کے طلبہ کے لیے واٹس ایپ رابطہ۔">WhatsApp registration and support for Pakistan.</p>
+        <a href="https://wa.me/+923357696999?text=Assalamu%20Alaykum%2C%20I%20want%20to%20enroll%20for%20the%20Dawrah%20Ilmiyyah" target="_blank" class="btn btn-primary" style="width:100%"><i class="fab fa-whatsapp"></i> Register (+92)</a>
       </div>
 
       <div class="reg-card">
-        <div class="reg-card-icon"><i class="fas fa-users-rectangle"></i></div>
-        <h3 class="reg-card-title" data-en="Sisters Dedicated Session" data-ur="خواتین کا خصوصی سیشن">Sisters Dedicated Session</h3>
-        <div class="reg-card-fee">CONFIDENTIAL</div>
-        <p class="reg-card-desc" data-en="Sister-only session on Bab al-Hayd conducted by a qualified female teacher with female moderation." data-ur="خواتین کے لیے مکمل پردے اور زنانہ ماڈریشن کے ساتھ خاص تعلیمی نشست کا اہتمام۔">Sister-only session on Bab al-Hayd conducted by a qualified female teacher with female moderation.</p>
+        <div class="reg-card-icon"><i class="fas fa-venus"></i></div>
+        <h3 class="reg-card-title" data-en="Sisters Session" data-ur="خواتین کا سیشن">Sisters Session</h3>
+        <div class="reg-card-fee">FREE</div>
+        <p class="reg-card-desc" data-en="Private sister-only session with female moderation." data-ur="خواتین کے لیے علیحدہ اور پردے دار سیشن۔">Private sister-only session with female moderation.</p>
         <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%20Sister%20Moderation%2C%20I%20want%20to%20join%20the%20Sisters%20Dawrah%20group" target="_blank" class="btn btn-outline" style="width:100%;border-color:var(--sister-pink);color:var(--sister-pink)"><i class="fas fa-venus"></i> Sisters Inquiry</a>
       </div>
     </div>
@@ -2143,31 +1919,31 @@ body.urdu-mode .faq-trigger { text-align: right; }
     <div class="faq-box">
       <div class="faq-item">
         <button class="faq-trigger">
-          <span data-en="Where will the classes be conducted?" data-ur="کلاسز کہاں منعقد ہوں گی؟">Where will the classes be conducted?</span>
+          <span data-en="Where will the classes take place?" data-ur="کلاسز کہاں ہوں گی؟">Where will the classes take place?</span>
           <i class="fas fa-chevron-down"></i>
         </button>
         <div class="faq-content">
-          <p data-en="Sessions are broadcast live online via Google Meet and high-definition cloud streams. Links are shared in the registered WhatsApp and Telegram groups before each session." data-ur="کلاسز لائیو گوگل میٹ اور کلاؤڈ اسٹریم کے ذریعے نشر ہوں گی۔ کلاس لنکس رجسٹرڈ واٹس ایپ اور ٹیلی گرام گروپس میں سیشن سے قبل فراہم کیے جائیں گے۔">Sessions are broadcast live online via Google Meet and high-definition cloud streams. Links are shared in the registered WhatsApp and Telegram groups before each session.</p>
+          <p data-en="Classes will be live online on Google Meet. Links will be posted in the registered WhatsApp groups before each session." data-ur="کلاسز گوگل میٹ پر لائیو ہوں گی۔ لنکس واٹس ایپ گروپس میں شیئر کیے جائیں گے۔">Classes will be live online on Google Meet. Links will be posted in the registered WhatsApp groups before each session.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger">
-          <span data-en="Will session recordings be available if I miss a lecture?" data-ur="کیا سیشنز کی ریکارڈنگ دستیاب ہوگی اگر کوئی کلاس چھوٹ جائے؟">Will session recordings be available if I miss a lecture?</span>
+          <span data-en="Are recordings provided if I miss a session?" data-ur="کیا ریکارڈنگ ملے گی؟">Are recordings provided if I miss a session?</span>
           <i class="fas fa-chevron-down"></i>
         </button>
         <div class="faq-content">
-          <p data-en="Yes, authenticated cloud recordings will be accessible to registered students for revision. However, live attendance is highly encouraged to gain the full benefit directly from the scholars." data-ur="جی ہاں، رجسٹرڈ طلبہ کے لیے نجی کلاؤڈ ریکارڈنگز دہرائی کے لیے فراہم کی جائیں گی، تاہم براہِ راست شرکت زیادہ بابرکت اور مفید ہے۔">Yes, authenticated cloud recordings will be accessible to registered students for revision. However, live attendance is highly encouraged to gain the full benefit directly from the scholars.</p>
+          <p data-en="Yes, recordings will be shared with registered students, but attending live is strongly recommended." data-ur="جی ہاں، ریکارڈنگ فراہم کی جائے گی، لیکن براہ راست شرکت زیادہ فائدہ مند ہے۔">Yes, recordings will be shared with registered students, but attending live is strongly recommended.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger">
-          <span data-en="How do I access the Student Study Material?" data-ur="طالب علم کا درسی مواد کیسے حاصل کریں؟">How do I access the Student Study Material?</span>
+          <span data-en="Where can I get the study material?" data-ur="درسی مواد کہاں ملے گا؟">Where can I get the study material?</span>
           <i class="fas fa-chevron-down"></i>
         </button>
         <div class="faq-content">
-          <p data-en="The complete compiled coursepack containing all 7 treatises is hosted on Google Drive. You can open, preview, and download it from the Study Material section of this page." data-ur="ساتوں متون پر مشتمل مکمل درسی کتابچہ گوگل ڈرائیو پر اپلوڈ ہے، جسے آپ اسی صفحے کے مطالعاتی مواد سیکشن سے باآسانی ڈاؤن لوڈ کر سکتے ہیں۔">The complete compiled coursepack containing all 7 treatises is hosted on Google Drive. You can open, preview, and download it from the Study Material section of this page.</p>
+          <p data-en="You can open and download the full PDF booklet right from the Study Material section above." data-ur="اوپر دیے گئے درسی مواد سیکشن سے آپ مکمل پی ڈی ایف حاصل کر سکتے ہیں۔">You can open and download the full PDF booklet right from the Study Material section above.</p>
         </div>
       </div>
     </div>
@@ -2180,20 +1956,20 @@ body.urdu-mode .faq-trigger { text-align: right; }
   <div class="container">
     <div class="footer-hadith">
       <div class="arabic">من سلك طريقا يلتمس فيه علما سهل الله له به طريقا إلى الجنة</div>
-      <div class="en" data-en="“Whoever treads a path seeking knowledge, Allah will make easy for him a path to Paradise.”" data-ur="”جو شخص حصولِ علم کے لیے کسی راستے پر چلتا ہے، اللہ تعالیٰ اس کے بدلے میں اس کے لیے جنت کا راستہ آسان فرما دیتا ہے۔“">“Whoever treads a path seeking knowledge, Allah will make easy for him a path to Paradise.”</div>
-      <div class="source" data-en="— Ṣaḥīḥ Muslim 2699" data-ur="— صحیح مسلم: 2699">— Ṣaḥīḥ Muslim 2699</div>
+      <div class="en" data-en="“Whoever treads a path seeking knowledge, Allah will make easy for him a path to Paradise.”" data-ur="”جو شخص حصولِ علم کے راستے پر چلتا ہے، اللہ اس کے لیے جنت کا راستہ آسان کر دیتا ہے۔“">“Whoever treads a path seeking knowledge, Allah will make easy for him a path to Paradise.”</div>
+      <div class="source" data-en="Ṣaḥīḥ Muslim 2699" data-ur="صحیح مسلم: 2699">Ṣaḥīḥ Muslim 2699</div>
     </div>
 
     <div class="footer-nav">
-      <a href="https://wa.me/+918770591499" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp India (+91)</a>
-      <a href="https://wa.me/+923357696999" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Pakistan (+92)</a>
-      <a href="https://t.me/+xCp0-pbg4qUxNTI0" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-telegram"></i> Telegram Channel</a>
+      <a href="https://wa.me/+918770591499" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp (+91)</a>
+      <a href="https://wa.me/+923357696999" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp (+92)</a>
+      <a href="https://t.me/+xCp0-pbg4qUxNTI0" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-telegram"></i> Telegram</a>
       <a href="https://instagram.com/taalib.al.ilm_" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @taalib.al.ilm_</a>
-      <a href="index.html" class="footer-link"><i class="fas fa-graduation-cap"></i> Talib Al-Ilm Level 2 Course</a>
+      <a href="index.html" class="footer-link"><i class="fas fa-graduation-cap"></i> Level 2 Course</a>
     </div>
 
     <div class="footer-copy">
-      &copy; 2026 Ṭālib al-‘Ilm Project · Madrassa Al-Athariyyah. All Rights Reserved.
+      &copy; 2026 Ṭālib al-‘Ilm Project · Madrassa Al-Athariyyah
     </div>
   </div>
 </footer>
@@ -2224,7 +2000,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
   overlay.addEventListener('click', closeDrawer);
   drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
 
-  /* ── BILINGUAL TOGGLE ENGINE ── */
+  /* ── BILINGUAL ENGINE ── */
   let isUrdu = false;
   const toggleBtns = [document.getElementById('langToggle'), document.getElementById('langToggleMobile')];
   function setLanguage(urdu){
@@ -2328,10 +2104,10 @@ body.urdu-mode .faq-trigger { text-align: right; }
     const link = 'https://drive.google.com/file/d/1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW/view?usp=sharing';
     if(navigator.clipboard && navigator.clipboard.writeText){
       navigator.clipboard.writeText(link).then(function(){
-        alert('Student Study Material link copied to clipboard:\n' + link);
+        alert('Link copied to clipboard:\n' + link);
       });
     } else {
-      prompt('Study Material Link:', link);
+      prompt('Link:', link);
     }
   };
 
@@ -2339,10 +2115,10 @@ body.urdu-mode .faq-trigger { text-align: right; }
   window.copySessionInfo = function(text){
     if(navigator.clipboard && navigator.clipboard.writeText){
       navigator.clipboard.writeText(text).then(function(){
-        alert('Copied to clipboard:\n' + text);
+        alert('Copied:\n' + text);
       });
     } else {
-      prompt('Copy session details:', text);
+      prompt('Session details:', text);
     }
   };
 
@@ -2355,7 +2131,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
   });
 
   /* ── COUNTDOWN TO 7 NOV 2026 ── */
-  const dawrahDate = new Date('2026-11-07T18:20:00+05:00').getTime(); // Nov 7, 2026, 6:20pm PKT / 6:50 IST
+  const dawrahDate = new Date('2026-11-07T18:20:00+05:00').getTime();
   function updateCountdown(){
     const now = new Date().getTime();
     const distance = dawrahDate - now;
@@ -2385,7 +2161,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
   if(canvas){
     const ctx = canvas.getContext('2d');
     let particles = [];
-    const count = 65;
+    const count = 55;
 
     function resizeCanvas(){
       const hero = document.getElementById('overview');
@@ -2400,10 +2176,10 @@ body.urdu-mode .faq-trigger { text-align: right; }
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          r: Math.random() * 1.8 + 0.4,
+          r: Math.random() * 1.6 + 0.4,
           dx: (Math.random() - 0.5) * 0.25,
           dy: (Math.random() - 0.5) * 0.2 - 0.1,
-          opacity: Math.random() * 0.55 + 0.15,
+          opacity: Math.random() * 0.5 + 0.15,
           pulse: Math.random() * Math.PI * 2
         });
       }
