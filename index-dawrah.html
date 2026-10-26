@@ -1074,11 +1074,12 @@ a:hover { color: var(--gold-lt); }
 }
 .reg-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.3rem;
-  margin-bottom: 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+  max-width: 820px;
+  margin: 0 auto 2.5rem;
 }
-@media(max-width: 850px){
+@media(max-width: 768px){
   .reg-card-grid { grid-template-columns: 1fr; }
 }
 .reg-card {
@@ -1964,8 +1965,8 @@ body.urdu-mode .faq-trigger { text-align: right; }
 
     <div class="hero-buttons">
       <a href="#timetable" class="btn btn-primary" data-en="Schedule" data-ur="شیڈول دیکھیں"><i class="fas fa-calendar-check"></i> Schedule</a>
-      <a href="https://drive.google.com/file/d/1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline" data-en="Study Material (PDF)" data-ur="درسی مواد (پی ڈی ایف)"><i class="fas fa-file-pdf"></i> Study Material (PDF)</a>
-      <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20would%20like%20to%20register%20for%20the%20First%20Dawrah%20Ilmiyyah%20(7-9%20Nov%202026)" target="_blank" rel="noopener" class="btn btn-green" data-en="Register Free" data-ur="مفت رجسٹریشن"><i class="fab fa-whatsapp"></i> Register Free</a>
+      <a href="dawrah-study-packet.pdf" download="Dawrah-Ilmiyyah-Study-Packet.pdf" class="btn btn-outline" data-en="Study Material (PDF)" data-ur="درسی مواد (پی ڈی ایف)"><i class="fas fa-file-pdf"></i> Study Material (PDF)</a>
+      <a href="#registration" class="btn btn-green" data-en="Register Free" data-ur="مفت رجسٹریشن"><i class="fab fa-whatsapp"></i> Register Free</a>
     </div>
 
     <!-- Countdown Timer -->
@@ -2395,9 +2396,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
       <div class="faculty-card">
         <div class="faculty-card-top"></div>
         <div class="faculty-card-body">
-          <div class="faculty-avatar">
-            <img src="https://drive.google.com/thumbnail?id=1or6dyg1Rj0KGPdud4GXXUU7taRl5hyom&sz=w200" alt="Shaykh Zafar Alam al-Athari" onerror="this.style.display='none';this.parentElement.textContent='ZA';">
-          </div>
+          <div class="faculty-avatar">ZA</div>
           <h3 class="faculty-name">Shaykh Zafar Alam al-Athari</h3>
           <div class="faculty-name-arabic">الشيخ ظفر عالم بن ضياء الرحمن الأثري</div>
           <div class="faculty-subject-tag">The Importance of Ikhlāṣ</div>
@@ -2441,11 +2440,9 @@ body.urdu-mode .faq-trigger { text-align: right; }
       <div class="faculty-card">
         <div class="faculty-card-top"></div>
         <div class="faculty-card-body">
-          <div class="faculty-avatar">
-            <img src="https://drive.google.com/thumbnail?id=1M_2OTjB0gULy_-12pX3z6jDZD5lYp8la&sz=w200" alt="Abu Mu‘awiyah al-Athari" onerror="this.style.display='none';this.parentElement.textContent='MQ';">
-          </div>
+          <div class="faculty-avatar">MQ</div>
           <h3 class="faculty-name">Abu Mu‘awiyah Muhammad Qurayshi</h3>
-          <div class="faculty-name-arabic">أبو معاوية محمد قريشي الأثري</div>
+          <div class="faculty-name-arabic">أبو معاوية محمد قريشی الأثري</div>
           <div class="faculty-subject-tag">Al-Ḥadīth al-Musalsal &amp; al-Qaṣīdah</div>
         </div>
       </div>
@@ -2454,9 +2451,7 @@ body.urdu-mode .faq-trigger { text-align: right; }
       <div class="faculty-card" style="border-color:rgba(216, 128, 156, 0.4)">
         <div class="faculty-card-top" style="background:linear-gradient(135deg, #d8809c 0%, #fae39c 100%)"></div>
         <div class="faculty-card-body">
-          <div class="faculty-avatar" style="border-color:var(--sister-pink);color:var(--sister-pink)">
-            <i class="fas fa-user"></i>
-          </div>
+          <div class="faculty-avatar" style="border-color:var(--sister-pink);color:var(--sister-pink)">BR</div>
           <h3 class="faculty-name">Ustadhah Bint Raees Ahmad</h3>
           <div class="faculty-name-arabic">الأستاذة بنت رئيس أحمد الخديجية الأثرية</div>
           <div class="faculty-subject-tag" style="border-color:var(--sister-pink)">Bāb al-Ḥayḍ (Sisters)</div>
@@ -2495,11 +2490,11 @@ body.urdu-mode .faq-trigger { text-align: right; }
           </p>
 
           <div class="material-buttons-row">
-            <a href="https://drive.google.com/file/d/1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">
-              <i class="fab fa-google-drive"></i> <span data-en="Open in Google Drive" data-ur="گوگل ڈرائیو پر کھولیں">Open in Google Drive</span>
+            <a href="dawrah-study-packet.pdf" download="Dawrah-Ilmiyyah-Study-Packet.pdf" class="btn btn-primary">
+              <i class="fas fa-download"></i> <span data-en="Download PDF" data-ur="پی ڈی ایف ڈاؤن لوڈ کریں">Download PDF</span>
             </a>
-            <a href="https://drive.google.com/uc?export=download&id=1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW" target="_blank" rel="noopener" class="btn btn-outline">
-              <i class="fas fa-download"></i> <span data-en="Direct Download" data-ur="ڈاؤن لوڈ کریں">Direct Download</span>
+            <a href="https://drive.google.com/file/d/1Cp2pXj9V4P0Q1cCFq0PfQQcD02BEJbyW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline">
+              <i class="fab fa-google-drive"></i> <span data-en="Open in Google Drive" data-ur="گوگل ڈرائیو پر کھولیں">Open in Google Drive</span>
             </a>
             <button class="btn btn-outline" onclick="toggleDrivePreview()">
               <i class="fas fa-eye"></i> <span id="previewBtnText" data-en="Preview Online" data-ur="آن لائن دیکھیں">Preview Online</span>
@@ -2516,7 +2511,10 @@ body.urdu-mode .faq-trigger { text-align: right; }
     <div class="embed-preview-wrapper" id="driveEmbedWrapper">
       <div class="embed-preview-header">
         <span class="embed-preview-title"><i class="fas fa-file-pdf"></i> Document Preview</span>
-        <button class="embed-close-btn" onclick="toggleDrivePreview()" aria-label="Close"><i class="fas fa-times"></i></button>
+        <div style="display:flex;align-items:center;gap:0.8rem">
+          <a href="dawrah-study-packet.pdf" download="Dawrah-Ilmiyyah-Study-Packet.pdf" style="font-size:0.75rem;color:var(--gold);display:inline-flex;align-items:center;gap:0.3rem"><i class="fas fa-download"></i> Direct Download</a>
+          <button class="embed-close-btn" onclick="toggleDrivePreview()" aria-label="Close"><i class="fas fa-times"></i></button>
+        </div>
       </div>
       <iframe id="driveIframe" class="embed-iframe" src="" allow="autoplay" title="Study Material Viewer"></iframe>
     </div>
@@ -2565,29 +2563,25 @@ body.urdu-mode .faq-trigger { text-align: right; }
     </div>
 
     <div class="reg-card-grid">
-      <div class="reg-card">
-        <div class="reg-card-icon"><i class="fas fa-globe"></i></div>
-        <h3 class="reg-card-title" data-en="India &amp; International" data-ur="انڈیا اور بین الاقوامی">India &amp; International</h3>
+
+      <!-- 1: Male Admin (Brothers) -->
+      <div class="reg-card" style="border-color:rgba(201,168,76,0.5)">
+        <div class="reg-card-icon"><i class="fas fa-user-tie"></i></div>
+        <h3 class="reg-card-title" data-en="Male Admin (Brothers)" data-ur="مرد ایڈمن (برادرز)">Male Admin (Brothers)</h3>
         <div class="reg-card-fee">FREE</div>
-        <p class="reg-card-desc" data-en="Live links and reminders shared on WhatsApp." data-ur="واٹس ایپ پر کلاس لنکس فراہم کیے جائیں گے۔">Live links and reminders shared on WhatsApp.</p>
-        <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%2C%20I%20want%20to%20enroll%20for%20the%20Dawrah%20Ilmiyyah" target="_blank" class="btn btn-primary" style="width:100%"><i class="fab fa-whatsapp"></i> Register (+91)</a>
+        <p class="reg-card-desc" data-en="Enrollment, live session links, and group moderation for brothers." data-ur="مرد طلبہ کے لیے رجسٹریشن، لائیو سیشن لنکس اور رہنمائی۔">Enrollment, live session links, and group moderation for brothers.</p>
+        <a href="https://wa.me/918957523584?text=Assalamu%20Alaykum%2C%20I%20would%20like%20to%20register%20for%20the%20Dawrah%20Ilmiyyah" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%"><i class="fab fa-whatsapp"></i> <span data-en="Contact Male Admin (+91 89575 23584)" data-ur="رابطہ مرد ایڈمن (+91 89575 23584)">Contact Male Admin (+91 89575 23584)</span></a>
       </div>
 
-      <div class="reg-card" style="border-color:var(--gold)">
-        <div class="reg-card-icon"><i class="fas fa-book-open"></i></div>
-        <h3 class="reg-card-title" data-en="Pakistan" data-ur="پاکستان">Pakistan</h3>
-        <div class="reg-card-fee">FREE</div>
-        <p class="reg-card-desc" data-en="WhatsApp registration and support for Pakistan." data-ur="پاکستان کے طلبہ کے لیے واٹس ایپ رابطہ۔">WhatsApp registration and support for Pakistan.</p>
-        <a href="https://wa.me/+923357696999?text=Assalamu%20Alaykum%2C%20I%20want%20to%20enroll%20for%20the%20Dawrah%20Ilmiyyah" target="_blank" class="btn btn-primary" style="width:100%"><i class="fab fa-whatsapp"></i> Register (+92)</a>
+      <!-- 2: Female Admin (Sisters) -->
+      <div class="reg-card" style="border-color:rgba(216, 128, 156, 0.45)">
+        <div class="reg-card-icon"><i class="fas fa-venus" style="color:var(--sister-pink)"></i></div>
+        <h3 class="reg-card-title" data-en="Female Admin (Sisters)" data-ur="خاتون ایڈمن (بہنیں)" style="color:var(--sister-pink)">Female Admin (Sisters)</h3>
+        <div class="reg-card-fee" style="color:var(--sister-pink)">FREE</div>
+        <p class="reg-card-desc" data-en="Private sister-only registration, separate links, and female moderation." data-ur="خواتین کے لیے علیحدہ اور پردے دار سیشن کی رجسٹریشن اور معاونت۔">Private sister-only registration, separate links, and female moderation.</p>
+        <a href="https://wa.me/918770591499?text=Assalamu%20Alaykum%20Sister%20Admin%2C%20I%20would%20like%20to%20register%20for%20the%20Sisters%20Dawrah" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;border-color:var(--sister-pink);color:var(--sister-pink)"><i class="fas fa-venus"></i> <span data-en="Contact Female Admin (+91 87705 91499)" data-ur="رابطہ خاتون ایڈمن (+91 87705 91499)">Contact Female Admin (+91 87705 91499)</span></a>
       </div>
 
-      <div class="reg-card">
-        <div class="reg-card-icon"><i class="fas fa-venus"></i></div>
-        <h3 class="reg-card-title" data-en="Sisters Session" data-ur="خواتین کا سیشن">Sisters Session</h3>
-        <div class="reg-card-fee">FREE</div>
-        <p class="reg-card-desc" data-en="Private sister-only session with female moderation." data-ur="خواتین کے لیے علیحدہ اور پردے دار سیشن۔">Private sister-only session with female moderation.</p>
-        <a href="https://wa.me/+918770591499?text=Assalamu%20Alaykum%20Sister%20Moderation%2C%20I%20want%20to%20join%20the%20Sisters%20Dawrah%20group" target="_blank" class="btn btn-outline" style="width:100%;border-color:var(--sister-pink);color:var(--sister-pink)"><i class="fas fa-venus"></i> Sisters Inquiry</a>
-      </div>
     </div>
 
     <!-- FAQS ACCORDION -->
@@ -2636,8 +2630,8 @@ body.urdu-mode .faq-trigger { text-align: right; }
     </div>
 
     <div class="footer-nav">
-      <a href="https://wa.me/+918770591499" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp (+91)</a>
-      <a href="https://wa.me/+923357696999" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp (+92)</a>
+      <a href="https://wa.me/918957523584" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Male Admin (+91 89575 23584)</a>
+      <a href="https://wa.me/918770591499" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Female Admin (+91 87705 91499)</a>
       <a href="https://t.me/+xCp0-pbg4qUxNTI0" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-telegram"></i> Telegram</a>
       <a href="https://instagram.com/taalib.al.ilm_" class="footer-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @taalib.al.ilm_</a>
       <a href="index.html" class="footer-link"><i class="fas fa-graduation-cap"></i> Level 2 Course</a>
